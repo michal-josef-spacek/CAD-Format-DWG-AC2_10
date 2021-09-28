@@ -882,14 +882,18 @@ types:
         type: entity_common
       - id: x
         type: f8
+        doc: TEXT/10
       - id: y
         type: f8
+        doc: TEXT/20
       - id: height
         type: f8
+        doc: TEXT/40
       - id: size
         type: s2
       - id: value
         size: size
+        doc: TEXT/1
       - id: angle
         type: f8
         if: entity_common.flag2_8
@@ -1081,25 +1085,34 @@ types:
     seq:
       - id: flag1_1
         type: b1
+        doc: STYLE/70
       - id: flag1_2
         type: b1
+        doc: STYLE/70
       - id: flag1_3
         type: b1
+        doc: STYLE/70
       - id: flag1_4
         type: b1
+        doc: STYLE/70
       - id: flag1_5
         type: b1
+        doc: STYLE/70
       - id: flag1_vertical
         type: b1
+        doc: STYLE/70
       - id: flag1_7
         type: b1
+        doc: STYLE/70
       - id: flag1_load
         type: b1
+        doc: STYLE/70
       - id: text
         size: 31
         type: str
         encoding: ASCII
         terminator: 0x2e
+        doc: STYLE/2
       - id: height
         type: f8
         doc: STYLE/40
