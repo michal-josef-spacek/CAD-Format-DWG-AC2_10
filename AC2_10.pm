@@ -1633,6 +1633,15 @@ sub _read {
     if ($self->entity_common()->flag2_8()) {
         $self->{angle} = $self->{_io}->read_f8le();
     }
+    if ($self->entity_common()->flag2_2()) {
+        $self->{foo1} = $self->{_io}->read_u1();
+    }
+    if ($self->entity_common()->flag2_3()) {
+        $self->{aligned_to_x} = $self->{_io}->read_f8le();
+    }
+    if ($self->entity_common()->flag2_3()) {
+        $self->{aligned_to_y} = $self->{_io}->read_f8le();
+    }
 }
 
 sub entity_common {
@@ -1668,6 +1677,21 @@ sub value {
 sub angle {
     my ($self) = @_;
     return $self->{angle};
+}
+
+sub foo1 {
+    my ($self) = @_;
+    return $self->{foo1};
+}
+
+sub aligned_to_x {
+    my ($self) = @_;
+    return $self->{aligned_to_x};
+}
+
+sub aligned_to_y {
+    my ($self) = @_;
+    return $self->{aligned_to_y};
 }
 
 ########################################################################

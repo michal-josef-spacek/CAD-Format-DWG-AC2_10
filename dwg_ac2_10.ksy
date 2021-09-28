@@ -893,6 +893,18 @@ types:
       - id: angle
         type: f8
         if: entity_common.flag2_8
+      - id: foo1
+        type: u1
+        if: entity_common.flag2_2
+        doc: TEXT/72
+      - id: aligned_to_x
+        type: f8
+        if: entity_common.flag2_3
+        doc: TEXT/11
+      - id: aligned_to_y
+        type: f8
+        if: entity_common.flag2_3
+        doc: TEXT/21
   entity_trace:
     seq:
       - id: entity_common
