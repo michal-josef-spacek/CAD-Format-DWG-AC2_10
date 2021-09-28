@@ -1081,7 +1081,7 @@ types:
         type: b1
       - id: flag1_7
         type: b1
-      - id: flag1_8
+      - id: flag1_load
         type: b1
       - id: text
         size: 31

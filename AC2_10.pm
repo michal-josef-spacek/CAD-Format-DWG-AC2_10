@@ -640,7 +640,7 @@ sub _read {
     $self->{flag1_5} = $self->{_io}->read_bits_int_be(1);
     $self->{flag1_vertical} = $self->{_io}->read_bits_int_be(1);
     $self->{flag1_7} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag1_8} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag1_load} = $self->{_io}->read_bits_int_be(1);
     $self->{_io}->align_to_byte();
     $self->{text} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 46, 0));
     $self->{height} = $self->{_io}->read_f8le();
@@ -695,9 +695,9 @@ sub flag1_7 {
     return $self->{flag1_7};
 }
 
-sub flag1_8 {
+sub flag1_load {
     my ($self) = @_;
-    return $self->{flag1_8};
+    return $self->{flag1_load};
 }
 
 sub text {
