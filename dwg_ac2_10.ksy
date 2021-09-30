@@ -421,12 +421,10 @@ types:
       - id: unknown28
         type: f8
       - id: unknown29
-        size: 2
+        type: s2
       - id: blip
-        type: s1
-        doc: 0x02e3, $BLIPMODE, TODO s1 or s2?
-      - id: unknown29a
-        size: 1
+        type: s2
+        doc: 0x02e3-0x02e4, $BLIPMODE
   entity:
     seq:
       - id: entity_type
