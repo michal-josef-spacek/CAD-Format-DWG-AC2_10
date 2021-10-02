@@ -1,7 +1,6 @@
 .travis.yml
 AC2_10.pm
 AC2_10.pod
-convert.sh
 dwg_ac2_10.ksy
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
