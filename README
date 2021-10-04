@@ -6,8 +6,14 @@ SYNOPSIS
 
      my $dwg = CAD::Format::DWG::AC2_10->new;
      my $dwg = CAD::Format::DWG::AC2_10::from_file($dwg_file);
-     my $entities_ar = $dwg->entities;
+     my $blocks_ar = $dwg->blocks;
+     my $entities = $dwg->entities;
      my $header = $dwg->header;
+     my $layers_ar = $dwg->layers;
+     my $linetypes_ar = $dwg->linetypes;
+     my $styles_ar = $dwg->styles;
+     my $views_ar = $dwg->views;
+     my $block_entities = $dwg->block_entities;
 
 DESCRIPTION
     In distribution is kaitai structure definition file dwg_ac2_10.ksy which
@@ -28,13 +34,20 @@ METHODS
 
     Returns instance of object.
 
+  "blocks"
+     my $blocks_ar = $dwg->blocks;
+
+    Get list of blocks in DWG file.
+
+    Returns reference to array with CAD::Format::DWG::AC2_10::Block
+    instances.
+
   "entities"
-     my $entities_ar = $dwg->entities;
+     my $entities = $dwg->entities;
 
     Get list of entities in DWG file.
 
-    Returns reference to array with CAD::Format::DWG::AC2_10::Entity
-    instances.
+    Returns CAD::Format::DWG::AC2_10::RealEntities instance.
 
   "header"
      my $header = $dwg->header;
@@ -42,6 +55,37 @@ METHODS
     Get header of DWG file.
 
     Returns instance of CAD::Format::DWG::AC2_10::Header object.
+
+  "layers"
+     my $layers_ar = $dwg->layers;
+
+    Get list of layers in DWG file.
+
+    Returns reference to array with CAD::Format::DWG::AC2_10::Layer
+    instances.
+
+  "styles"
+     my $styles_ar = $dwg->styles;
+
+    Get list of styles in DWG file.
+
+    Returns reference to array with CAD::Format::DWG::AC2_10::Style
+    instances.
+
+  "views"
+     my $views_ar = $dwg->views;
+
+    Get list of views in DWG file.
+
+    Returns reference to array with CAD::Format::DWG::AC2_10::View
+    instances.
+
+  "block_entities"
+     my $block_entities = $dwg->block_entities;
+
+    Get list of block entitites.
+
+    Returns CAD::Format::DWG::AC2_10::RealEntities instance
 
 DEPENDENCIES
     IO::KaitaiStruct.
