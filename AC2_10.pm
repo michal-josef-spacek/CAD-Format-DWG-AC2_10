@@ -3590,7 +3590,7 @@ sub new {
 sub _read {
     my ($self) = @_;
 
-    $self->{u1} = $self->{_io}->read_bytes(4);
+    $self->{u1} = $self->{_io}->read_bytes(1);
     $self->{view_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 46, 0));
     $self->{u2} = $self->{_io}->read_u1();
     $self->{view_size} = $self->{_io}->read_f8le();
@@ -3600,6 +3600,7 @@ sub _read {
     $self->{view_dir_x} = $self->{_io}->read_f8le();
     $self->{view_dir_y} = $self->{_io}->read_f8le();
     $self->{view_dir_z} = $self->{_io}->read_f8le();
+    $self->{u3} = $self->{_io}->read_u2le();
 }
 
 sub u1 {
@@ -3650,6 +3651,11 @@ sub view_dir_y {
 sub view_dir_z {
     my ($self) = @_;
     return $self->{view_dir_z};
+}
+
+sub u3 {
+    my ($self) = @_;
+    return $self->{u3};
 }
 
 1;

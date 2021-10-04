@@ -1133,7 +1133,7 @@ types:
   view:
     seq:
       - id: u1
-        size: 4
+        size: 1
       - id: view_name
         size: 31
         type: str
@@ -1162,6 +1162,8 @@ types:
       - id: view_dir_z
         type: f8
         doc: VIEW/31
+      - id: u3
+        type: u2
 enums:
   entities:
     1: line
