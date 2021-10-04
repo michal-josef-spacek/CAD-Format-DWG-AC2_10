@@ -50,6 +50,10 @@ our $ISO_PLANE_LEFT = 0;
 our $ISO_PLANE_TOP = 1;
 our $ISO_PLANE_RIGHT = 2;
 
+our $TEXT_TYPE_CENTER = 1;
+our $TEXT_TYPE_END = 2;
+our $TEXT_TYPE_ALIGNED = 3;
+
 our $ATTRIBUTES_FALSE = 0;
 our $ATTRIBUTES_NORMAL = 1;
 our $ATTRIBUTES_TRUE = 2;
@@ -1752,13 +1756,47 @@ sub _read {
     if ($self->entity_common()->flag2_8()) {
         $self->{angle} = $self->{_io}->read_f8le();
     }
-    if ($self->entity_common()->flag2_2()) {
-        $self->{foo1} = $self->{_io}->read_u1();
+    if ($self->entity_common()->flag2_7()) {
+        $self->{width_factor} = $self->{_io}->read_f8le();
     }
+    if ($self->entity_common()->flag2_6()) {
+        $self->{obliquing_angle} = $self->{_io}->read_f8le();
+    }
+    if ($self->entity_common()->flag2_5()) {
+        $self->{style_index} = $self->{_io}->read_u1();
+    }
+    if ($self->entity_common()->flag2_4()) {
+        $self->{flags1} = $self->{_io}->read_bits_int_be(1);
+    }
+    if ($self->entity_common()->flag2_4()) {
+        $self->{flags2} = $self->{_io}->read_bits_int_be(1);
+    }
+    if ($self->entity_common()->flag2_4()) {
+        $self->{flags3} = $self->{_io}->read_bits_int_be(1);
+    }
+    if ($self->entity_common()->flag2_4()) {
+        $self->{flags4} = $self->{_io}->read_bits_int_be(1);
+    }
+    if ($self->entity_common()->flag2_4()) {
+        $self->{flags5} = $self->{_io}->read_bits_int_be(1);
+    }
+    if ($self->entity_common()->flag2_4()) {
+        $self->{flags_upside_down} = $self->{_io}->read_bits_int_be(1);
+    }
+    if ($self->entity_common()->flag2_4()) {
+        $self->{flags_backwards} = $self->{_io}->read_bits_int_be(1);
+    }
+    if ($self->entity_common()->flag2_4()) {
+        $self->{flags8} = $self->{_io}->read_bits_int_be(1);
+    }
+    $self->{_io}->align_to_byte();
     if ($self->entity_common()->flag2_3()) {
+        $self->{type} = $self->{_io}->read_u1();
+    }
+    if ($self->entity_common()->flag2_2()) {
         $self->{aligned_to_x} = $self->{_io}->read_f8le();
     }
-    if ($self->entity_common()->flag2_3()) {
+    if ($self->entity_common()->flag2_2()) {
         $self->{aligned_to_y} = $self->{_io}->read_f8le();
     }
 }
@@ -1798,9 +1836,64 @@ sub angle {
     return $self->{angle};
 }
 
-sub foo1 {
+sub width_factor {
     my ($self) = @_;
-    return $self->{foo1};
+    return $self->{width_factor};
+}
+
+sub obliquing_angle {
+    my ($self) = @_;
+    return $self->{obliquing_angle};
+}
+
+sub style_index {
+    my ($self) = @_;
+    return $self->{style_index};
+}
+
+sub flags1 {
+    my ($self) = @_;
+    return $self->{flags1};
+}
+
+sub flags2 {
+    my ($self) = @_;
+    return $self->{flags2};
+}
+
+sub flags3 {
+    my ($self) = @_;
+    return $self->{flags3};
+}
+
+sub flags4 {
+    my ($self) = @_;
+    return $self->{flags4};
+}
+
+sub flags5 {
+    my ($self) = @_;
+    return $self->{flags5};
+}
+
+sub flags_upside_down {
+    my ($self) = @_;
+    return $self->{flags_upside_down};
+}
+
+sub flags_backwards {
+    my ($self) = @_;
+    return $self->{flags_backwards};
+}
+
+sub flags8 {
+    my ($self) = @_;
+    return $self->{flags8};
+}
+
+sub type {
+    my ($self) = @_;
+    return $self->{type};
 }
 
 sub aligned_to_x {
