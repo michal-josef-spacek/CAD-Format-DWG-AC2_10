@@ -7,6 +7,7 @@ inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
+inc/Module/Install/External.pm
 inc/Module/Install/Fetch.pm
 inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
@@ -17,7 +18,14 @@ Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
-t/CAD-Format-DWG-AC2_10/01-use.t
-t/CAD-Format-DWG-AC2_10/02-version.t
+t/CAD-Format-DWG-AC2_10/001-use.t
+t/CAD-Format-DWG-AC2_10/002-version.t
+t/CAD-Format-DWG-AC2_10/003-header-magic.t
+t/CAD-Format-DWG-AC2_10/004-header-zeros.t
+t/CAD-Format-DWG-AC2_10/005-header-zero_one_or_three.t
+t/data/header/magic/BLANK.DWG
+t/data/header/zero_one_or_three/BLANK.DWG
+t/data/header/zeros/BLANK.DWG
+TODO
 xt/CAD-Format-DWG-AC2_10/01-pod_coverage.t
 xt/CAD-Format-DWG-AC2_10/02-pod.t
