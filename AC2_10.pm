@@ -2243,8 +2243,8 @@ sub _read {
     $self->{blocks_end} = $self->{_io}->read_s4le();
     $self->{unknown4b} = $self->{_io}->read_bytes(2);
     $self->{unknown4c} = $self->{_io}->read_bytes(2);
-    $self->{block_table_item_size} = $self->{_io}->read_s2le();
     $self->{number_of_table_blocks} = $self->{_io}->read_s2le();
+    $self->{block_table_item_size} = $self->{_io}->read_u2le();
     $self->{unknown4e} = $self->{_io}->read_bytes(2);
     $self->{block_table_begin} = $self->{_io}->read_u4le();
     $self->{layer_table_item_size} = $self->{_io}->read_s2le();

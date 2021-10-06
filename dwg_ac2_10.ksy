@@ -95,7 +95,7 @@ types:
       - id: unknown4c
         size: 2
       - id: block_table_item_size
-        type: s2
+        type: u2
       - id: number_of_table_blocks
         type: s2
       - id: unknown4e
