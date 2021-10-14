@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/table_linetype_begin')->s
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->table_linetype_begin, 948, 'Begin address of linetype table (948).');
+is($obj->header->table_linetype_begin, 908, 'Begin address of linetype table (908).');
