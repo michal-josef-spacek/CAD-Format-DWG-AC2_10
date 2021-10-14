@@ -81,15 +81,15 @@ types:
       - id: dwg_version
         type: s1
       - id: entities_start
-        type: s4
+        type: u4
       - id: entities_end
-        type: s4
+        type: u4
       - id: blocks_start
-        type: s4
+        type: u4
       - id: blocks_size
-        type: s4
+        type: u4
       - id: blocks_end
-        type: s4
+        type: u4
       - id: unknown4b
         size: 2
       - id: unknown4c
@@ -103,33 +103,33 @@ types:
       - id: table_block_begin
         type: u4
       - id: table_layer_item_size
-        type: s2
+        type: u2
       - id: table_layer_items
-        type: s2
+        type: u2
       - id: unknown4g
         size: 2
       - id: table_layer_begin
         type: u4
       - id: table_style_item_size
-        type: s2
+        type: u2
       - id: table_style_items
-        type: s2
+        type: u2
       - id: unknown4i
         size: 2
       - id: table_style_begin
         type: u4
       - id: table_linetype_item_size
-        type: s2
+        type: u2
       - id: table_linetype_items
-        type: s2
+        type: u2
       - id: unknown4k
         size: 2
       - id: table_linetype_begin
         type: u4
       - id: table_view_item_size
-        type: s2
+        type: u2
       - id: table_view_items
-        type: s2
+        type: u2
       - id: unknown4m
         size: 2
       - id: table_view_begin
