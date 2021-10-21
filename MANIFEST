@@ -31,11 +31,11 @@ t/CAD-Format-DWG-AC2_10/010-header-drawing_second_y.t
 t/CAD-Format-DWG-AC2_10/011-header-drawing_second_z.t
 t/CAD-Format-DWG-AC2_10/012-header-entities_end.t
 t/CAD-Format-DWG-AC2_10/013-header-entities_start.t
-t/CAD-Format-DWG-AC2_10/015-header-magic.t
-t/CAD-Format-DWG-AC2_10/016-header-number_of_entities.t
-t/CAD-Format-DWG-AC2_10/017-header-insertion_base_x.t
-t/CAD-Format-DWG-AC2_10/018-header-insertion_base_y.t
-t/CAD-Format-DWG-AC2_10/019-header-insertion_base_z.t
+t/CAD-Format-DWG-AC2_10/015-header-insertion_base_x.t
+t/CAD-Format-DWG-AC2_10/016-header-insertion_base_y.t
+t/CAD-Format-DWG-AC2_10/017-header-insertion_base_z.t
+t/CAD-Format-DWG-AC2_10/018-header-magic.t
+t/CAD-Format-DWG-AC2_10/019-header-number_of_entities.t
 t/CAD-Format-DWG-AC2_10/020-header-table_block_begin.t
 t/CAD-Format-DWG-AC2_10/021-header-table_block_item_size.t
 t/CAD-Format-DWG-AC2_10/022-header-table_block_items.t
