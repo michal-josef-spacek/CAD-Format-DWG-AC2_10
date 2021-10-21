@@ -107,7 +107,9 @@ t/data/header/snap_angle/BLANK.DWG
 t/data/header/snap_base_x/BLANK.DWG
 t/data/header/snap_base_y/BLANK.DWG
 t/data/header/snap_resolution_x/BLANK.DWG
+t/data/header/snap_resolution_x/SNAP1.DWG
 t/data/header/snap_resolution_y/BLANK.DWG
+t/data/header/snap_resolution_y/SNAP1.DWG
 t/data/header/snap_style/BLANK.DWG
 t/data/header/table_block_begin/BLANK.DWG
 t/data/header/table_block_item_size/BLANK.DWG
