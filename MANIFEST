@@ -58,8 +58,11 @@ t/CAD-Format-DWG-AC2_10/038-header-table_view_items.t
 t/CAD-Format-DWG-AC2_10/039-header-version_major.t
 t/CAD-Format-DWG-AC2_10/040-header-version_micro.t
 t/CAD-Format-DWG-AC2_10/041-header-version_minor.t
-t/CAD-Format-DWG-AC2_10/042-header-zeros.t
-t/CAD-Format-DWG-AC2_10/043-header-zero_one_or_three.t
+t/CAD-Format-DWG-AC2_10/042-header-view_ctrl_x.t
+t/CAD-Format-DWG-AC2_10/043-header-view_ctrl_y.t
+t/CAD-Format-DWG-AC2_10/044-header-view_ctrl_z.t
+t/CAD-Format-DWG-AC2_10/045-header-zeros.t
+t/CAD-Format-DWG-AC2_10/046-header-zero_one_or_three.t
 t/data/header/blocks_end/BLANK.DWG
 t/data/header/blocks_end/BLOCK1.DWG
 t/data/header/blocks_end/BLOCK2.DWG
@@ -108,6 +111,9 @@ t/data/header/table_view_items/BLANK.DWG
 t/data/header/version_major/BLANK.DWG
 t/data/header/version_micro/BLANK.DWG
 t/data/header/version_minor/BLANK.DWG
+t/data/header/view_ctrl_x/BLANK.DWG
+t/data/header/view_ctrl_y/BLANK.DWG
+t/data/header/view_ctrl_z/BLANK.DWG
 t/data/header/zero_one_or_three/BLANK.DWG
 t/data/header/zeros/BLANK.DWG
 TODO
