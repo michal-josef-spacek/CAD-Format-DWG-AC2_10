@@ -3,7 +3,7 @@ use warnings;
 
 use CAD::Format::DWG::AC2_10;
 use File::Object;
-use Test::More 'tests' => 2;
+use Test::More 'tests' => 3;
 use Test::NoWarnings;
 
 # Data directory.
