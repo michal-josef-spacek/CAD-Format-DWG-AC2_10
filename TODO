@@ -2,7 +2,8 @@ TODO
 ====
 3. BLANK.DWG on one place.
 4. Rename current_layer() to current_layer_index()?
-5.
+5. Rename text_style() to text_style_index()?
+6.
 
 Applied
 =======
