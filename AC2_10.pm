@@ -637,86 +637,29 @@ sub new {
 sub _read {
     my ($self) = @_;
 
-    $self->{flag1_1} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag1_2} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag1_3} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag1_4} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag1_5} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag1_vertical} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag1_7} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag1_load} = $self->{_io}->read_bits_int_be(1);
-    $self->{_io}->align_to_byte();
-    $self->{text} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 46, 0));
+    $self->{flag} = CAD::Format::DWG::AC2_10::StyleFlag->new($self->{_io}, $self, $self->{_root});
+    $self->{style_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(32), 0, 0));
     $self->{height} = $self->{_io}->read_f8le();
-    $self->{unknown1} = $self->{_io}->read_u1();
     $self->{width_factor} = $self->{_io}->read_f8le();
     $self->{obliquing_angle_in_radians} = $self->{_io}->read_f8le();
-    $self->{flag2_1} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag2_2} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag2_3} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag2_4} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag2_5} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag2_upside_down} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag2_backwards} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag2_8} = $self->{_io}->read_bits_int_be(1);
-    $self->{_io}->align_to_byte();
-    $self->{u12} = $self->{_io}->read_f8le();
-    $self->{font_file} = $self->{_io}->read_bytes(64);
+    $self->{generation} = CAD::Format::DWG::AC2_10::StyleGeneration->new($self->{_io}, $self, $self->{_root});
+    $self->{last_height} = $self->{_io}->read_f8le();
+    $self->{font_file} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(64), 0, 0));
 }
 
-sub flag1_1 {
+sub flag {
     my ($self) = @_;
-    return $self->{flag1_1};
+    return $self->{flag};
 }
 
-sub flag1_2 {
+sub style_name {
     my ($self) = @_;
-    return $self->{flag1_2};
-}
-
-sub flag1_3 {
-    my ($self) = @_;
-    return $self->{flag1_3};
-}
-
-sub flag1_4 {
-    my ($self) = @_;
-    return $self->{flag1_4};
-}
-
-sub flag1_5 {
-    my ($self) = @_;
-    return $self->{flag1_5};
-}
-
-sub flag1_vertical {
-    my ($self) = @_;
-    return $self->{flag1_vertical};
-}
-
-sub flag1_7 {
-    my ($self) = @_;
-    return $self->{flag1_7};
-}
-
-sub flag1_load {
-    my ($self) = @_;
-    return $self->{flag1_load};
-}
-
-sub text {
-    my ($self) = @_;
-    return $self->{text};
+    return $self->{style_name};
 }
 
 sub height {
     my ($self) = @_;
     return $self->{height};
-}
-
-sub unknown1 {
-    my ($self) = @_;
-    return $self->{unknown1};
 }
 
 sub width_factor {
@@ -729,49 +672,14 @@ sub obliquing_angle_in_radians {
     return $self->{obliquing_angle_in_radians};
 }
 
-sub flag2_1 {
+sub generation {
     my ($self) = @_;
-    return $self->{flag2_1};
+    return $self->{generation};
 }
 
-sub flag2_2 {
+sub last_height {
     my ($self) = @_;
-    return $self->{flag2_2};
-}
-
-sub flag2_3 {
-    my ($self) = @_;
-    return $self->{flag2_3};
-}
-
-sub flag2_4 {
-    my ($self) = @_;
-    return $self->{flag2_4};
-}
-
-sub flag2_5 {
-    my ($self) = @_;
-    return $self->{flag2_5};
-}
-
-sub flag2_upside_down {
-    my ($self) = @_;
-    return $self->{flag2_upside_down};
-}
-
-sub flag2_backwards {
-    my ($self) = @_;
-    return $self->{flag2_backwards};
-}
-
-sub flag2_8 {
-    my ($self) = @_;
-    return $self->{flag2_8};
-}
-
-sub u12 {
-    my ($self) = @_;
-    return $self->{u12};
+    return $self->{last_height};
 }
 
 sub font_file {
@@ -1117,6 +1025,86 @@ sub u20 {
 }
 
 ########################################################################
+package CAD::Format::DWG::AC2_10::StyleFlag;
+
+our @ISA = 'IO::KaitaiStruct::Struct';
+
+sub from_file {
+    my ($class, $filename) = @_;
+    my $fd;
+
+    open($fd, '<', $filename) or return undef;
+    binmode($fd);
+    return new($class, IO::KaitaiStruct::Stream->new($fd));
+}
+
+sub new {
+    my ($class, $_io, $_parent, $_root) = @_;
+    my $self = IO::KaitaiStruct::Struct->new($_io);
+
+    bless $self, $class;
+    $self->{_parent} = $_parent;
+    $self->{_root} = $_root || $self;;
+
+    $self->_read();
+
+    return $self;
+}
+
+sub _read {
+    my ($self) = @_;
+
+    $self->{flag1} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag2} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag3} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag4} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag5} = $self->{_io}->read_bits_int_be(1);
+    $self->{vertical} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag7} = $self->{_io}->read_bits_int_be(1);
+    $self->{load} = $self->{_io}->read_bits_int_be(1);
+}
+
+sub flag1 {
+    my ($self) = @_;
+    return $self->{flag1};
+}
+
+sub flag2 {
+    my ($self) = @_;
+    return $self->{flag2};
+}
+
+sub flag3 {
+    my ($self) = @_;
+    return $self->{flag3};
+}
+
+sub flag4 {
+    my ($self) = @_;
+    return $self->{flag4};
+}
+
+sub flag5 {
+    my ($self) = @_;
+    return $self->{flag5};
+}
+
+sub vertical {
+    my ($self) = @_;
+    return $self->{vertical};
+}
+
+sub flag7 {
+    my ($self) = @_;
+    return $self->{flag7};
+}
+
+sub load {
+    my ($self) = @_;
+    return $self->{load};
+}
+
+########################################################################
 package CAD::Format::DWG::AC2_10::EntityBlockEnd;
 
 our @ISA = 'IO::KaitaiStruct::Struct';
@@ -1152,6 +1140,86 @@ sub _read {
 sub entity_common {
     my ($self) = @_;
     return $self->{entity_common};
+}
+
+########################################################################
+package CAD::Format::DWG::AC2_10::StyleGeneration;
+
+our @ISA = 'IO::KaitaiStruct::Struct';
+
+sub from_file {
+    my ($class, $filename) = @_;
+    my $fd;
+
+    open($fd, '<', $filename) or return undef;
+    binmode($fd);
+    return new($class, IO::KaitaiStruct::Stream->new($fd));
+}
+
+sub new {
+    my ($class, $_io, $_parent, $_root) = @_;
+    my $self = IO::KaitaiStruct::Struct->new($_io);
+
+    bless $self, $class;
+    $self->{_parent} = $_parent;
+    $self->{_root} = $_root || $self;;
+
+    $self->_read();
+
+    return $self;
+}
+
+sub _read {
+    my ($self) = @_;
+
+    $self->{flag1} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag2} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag3} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag4} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag5} = $self->{_io}->read_bits_int_be(1);
+    $self->{upside_down} = $self->{_io}->read_bits_int_be(1);
+    $self->{backwards} = $self->{_io}->read_bits_int_be(1);
+    $self->{flag8} = $self->{_io}->read_bits_int_be(1);
+}
+
+sub flag1 {
+    my ($self) = @_;
+    return $self->{flag1};
+}
+
+sub flag2 {
+    my ($self) = @_;
+    return $self->{flag2};
+}
+
+sub flag3 {
+    my ($self) = @_;
+    return $self->{flag3};
+}
+
+sub flag4 {
+    my ($self) = @_;
+    return $self->{flag4};
+}
+
+sub flag5 {
+    my ($self) = @_;
+    return $self->{flag5};
+}
+
+sub upside_down {
+    my ($self) = @_;
+    return $self->{upside_down};
+}
+
+sub backwards {
+    my ($self) = @_;
+    return $self->{backwards};
+}
+
+sub flag8 {
+    my ($self) = @_;
+    return $self->{flag8};
 }
 
 ########################################################################
