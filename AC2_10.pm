@@ -1401,11 +1401,10 @@ sub _read {
     my ($self) = @_;
 
     $self->{frozen} = $self->{_io}->read_s1();
-    $self->{color} = $self->{_io}->read_s1();
-    $self->{unknown2} = $self->{_io}->read_s1();
     $self->{linetype_index} = $self->{_io}->read_s1();
     $self->{unknown3} = $self->{_io}->read_s1();
     $self->{layer_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(32), 0, 0));
+    $self->{color} = $self->{_io}->read_s2le();
 }
 
 sub frozen {
@@ -1421,11 +1420,6 @@ sub layer_name {
 sub color {
     my ($self) = @_;
     return $self->{color};
-}
-
-sub unknown2 {
-    my ($self) = @_;
-    return $self->{unknown2};
 }
 
 sub linetype_index {

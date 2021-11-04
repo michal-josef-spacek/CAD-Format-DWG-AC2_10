@@ -982,10 +982,8 @@ types:
         terminator: 0x00
         doc: LAYER/2
       - id: color
-        type: s1
+        type: s2
         doc: LAYER/62
-      - id: unknown2
-        type: s1
       - id: linetype_index
         type: s1
         doc: LAYER/6
