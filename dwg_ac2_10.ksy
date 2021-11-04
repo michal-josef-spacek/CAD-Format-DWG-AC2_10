@@ -976,13 +976,11 @@ types:
         type: s1
         doc: LAYER/70
       - id: layer_name
-        size: 31
+        size: 32
         type: str
         encoding: ASCII
         terminator: 0x00
         doc: LAYER/2
-      - id: unknown1
-        type: s1
       - id: color
         type: s1
         doc: LAYER/62
