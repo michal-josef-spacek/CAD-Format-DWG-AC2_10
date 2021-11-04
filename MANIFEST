@@ -121,6 +121,10 @@ t/CAD-Format-DWG-AC2_10/100-header-view_point_z.t
 t/CAD-Format-DWG-AC2_10/101-header-view_size.t
 t/CAD-Format-DWG-AC2_10/102-header-zeros.t
 t/CAD-Format-DWG-AC2_10/103-header-zero_one_or_three.t
+t/CAD-Format-DWG-AC2_10/104-layers-color.t
+t/CAD-Format-DWG-AC2_10/105-layers-frozen.t
+t/CAD-Format-DWG-AC2_10/106-layers-layer_name.t
+t/CAD-Format-DWG-AC2_10/107-layers-linetype_index.t
 t/data/header/angular_precision/BLANK.DWG
 t/data/header/attributes/BLANK.DWG
 t/data/header/axis/AXIS_ON.DWG
@@ -247,6 +251,10 @@ t/data/header/view_point_z/BLANK.DWG
 t/data/header/view_size/BLANK.DWG
 t/data/header/zero_one_or_three/BLANK.DWG
 t/data/header/zeros/BLANK.DWG
+t/data/layers/color/BLANK.DWG
+t/data/layers/frozen/BLANK.DWG
+t/data/layers/layer_name/BLANK.DWG
+t/data/layers/linetype_index/BLANK.DWG
 TODO
 xt/CAD-Format-DWG-AC2_10/01-pod_coverage.t
 xt/CAD-Format-DWG-AC2_10/02-pod.t
