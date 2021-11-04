@@ -114,9 +114,12 @@ t/CAD-Format-DWG-AC2_10/093-header-version_minor.t
 t/CAD-Format-DWG-AC2_10/094-header-view_ctrl_x.t
 t/CAD-Format-DWG-AC2_10/095-header-view_ctrl_y.t
 t/CAD-Format-DWG-AC2_10/096-header-view_ctrl_z.t
-t/CAD-Format-DWG-AC2_10/097-header-view_size.t
-t/CAD-Format-DWG-AC2_10/098-header-zeros.t
-t/CAD-Format-DWG-AC2_10/099-header-zero_one_or_three.t
+t/CAD-Format-DWG-AC2_10/097-header-view_point_x.t
+t/CAD-Format-DWG-AC2_10/098-header-view_point_y.t
+t/CAD-Format-DWG-AC2_10/099-header-view_point_z.t
+t/CAD-Format-DWG-AC2_10/100-header-view_size.t
+t/CAD-Format-DWG-AC2_10/101-header-zeros.t
+t/CAD-Format-DWG-AC2_10/102-header-zero_one_or_three.t
 t/data/header/angular_precision/BLANK.DWG
 t/data/header/attributes/BLANK.DWG
 t/data/header/axis/AXIS_ON.DWG
@@ -236,6 +239,9 @@ t/data/header/version_minor/BLANK.DWG
 t/data/header/view_ctrl_x/BLANK.DWG
 t/data/header/view_ctrl_y/BLANK.DWG
 t/data/header/view_ctrl_z/BLANK.DWG
+t/data/header/view_point_x/BLANK.DWG
+t/data/header/view_point_y/BLANK.DWG
+t/data/header/view_point_z/BLANK.DWG
 t/data/header/view_size/BLANK.DWG
 t/data/header/zero_one_or_three/BLANK.DWG
 t/data/header/zeros/BLANK.DWG
