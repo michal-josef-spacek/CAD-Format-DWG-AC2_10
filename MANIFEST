@@ -252,6 +252,7 @@ t/data/header/view_size/BLANK.DWG
 t/data/header/zero_one_or_three/BLANK.DWG
 t/data/header/zeros/BLANK.DWG
 t/data/layers/color/BLANK.DWG
+t/data/layers/color/LAYER1.DWG
 t/data/layers/frozen/BLANK.DWG
 t/data/layers/layer_name/BLANK.DWG
 t/data/layers/linetype_index/BLANK.DWG
