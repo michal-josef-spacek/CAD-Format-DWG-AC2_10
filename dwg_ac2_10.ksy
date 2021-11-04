@@ -972,8 +972,8 @@ types:
         type: b1
   layer:
     seq:
-      - id: frozen
-        type: s1
+      - id: flag
+        type: layer_flag
         doc: LAYER/70
       - id: layer_name
         size: 32
@@ -987,6 +987,24 @@ types:
       - id: linetype_index
         type: u2
         doc: LAYER/6
+  layer_flag:
+    seq:
+      - id: flag1
+        type: b1
+      - id: flag2
+        type: b1
+      - id: flag3
+        type: b1
+      - id: flag4
+        type: b1
+      - id: flag5
+        type: b1
+      - id: flag6
+        type: b1
+      - id: flag7
+        type: b1
+      - id: frozen
+        type: b1
   linetype:
     seq:
       - id: u2
