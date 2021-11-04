@@ -985,10 +985,8 @@ types:
         type: s2
         doc: LAYER/62
       - id: linetype_index
-        type: s1
+        type: u2
         doc: LAYER/6
-      - id: unknown3
-        type: s1
   linetype:
     seq:
       - id: u2
