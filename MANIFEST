@@ -255,6 +255,7 @@ t/data/layers/color/BLANK.DWG
 t/data/layers/color/LAYER1.DWG
 t/data/layers/frozen/BLANK.DWG
 t/data/layers/layer_name/BLANK.DWG
+t/data/layers/layer_name/LAYER3.DWG
 t/data/layers/linetype_index/BLANK.DWG
 TODO
 xt/CAD-Format-DWG-AC2_10/01-pod_coverage.t
