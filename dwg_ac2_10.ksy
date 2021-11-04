@@ -979,7 +979,7 @@ types:
         size: 31
         type: str
         encoding: ASCII
-        terminator: 0x2e
+        terminator: 0x00
         doc: LAYER/2
       - id: unknown1
         type: s1

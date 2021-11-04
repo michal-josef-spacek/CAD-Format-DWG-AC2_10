@@ -1401,7 +1401,7 @@ sub _read {
     my ($self) = @_;
 
     $self->{frozen} = $self->{_io}->read_s1();
-    $self->{layer_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 46, 0));
+    $self->{layer_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 0, 0));
     $self->{unknown1} = $self->{_io}->read_s1();
     $self->{color} = $self->{_io}->read_s1();
     $self->{unknown2} = $self->{_io}->read_s1();
