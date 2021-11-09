@@ -847,6 +847,7 @@ types:
         type: u1
         if: entity_common.flag2_5
         doc: TEXT/7
+      # TODO Flags predelat na skutecne flags.
       - id: flags1
         type: b1
         if: entity_common.flag2_4
