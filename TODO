@@ -3,7 +3,9 @@ TODO
 3. BLANK.DWG on one place.
 4. Rename current_layer() to current_layer_index()?
 5. Rename text_style() to text_style_index()?
-6.
+6. Is block_size u4?
+7. v entity_text predelat flags na skutecne flags.
+8.
 
 Applied
 =======
