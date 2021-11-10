@@ -1103,7 +1103,7 @@ types:
         type: f8
         doc: STYLE/50
       - id: generation
-        type: style_generation
+        type: generation_flags
         doc: STYLE/71
       - id: last_height
         type: f8
@@ -1131,24 +1131,6 @@ types:
       - id: flag7
         type: b1
       - id: load
-        type: b1
-  style_generation:
-    seq:
-      - id: flag1
-        type: b1
-      - id: flag2
-        type: b1
-      - id: flag3
-        type: b1
-      - id: flag4
-        type: b1
-      - id: flag5
-        type: b1
-      - id: upside_down
-        type: b1
-      - id: backwards
-        type: b1
-      - id: flag8
         type: b1
   view:
     seq:
@@ -1184,6 +1166,24 @@ types:
         doc: VIEW/31
       - id: u3
         type: u2
+  generation_flags:
+    seq:
+      - id: flag1
+        type: b1
+      - id: flag2
+        type: b1
+      - id: flag3
+        type: b1
+      - id: flag4
+        type: b1
+      - id: flag5
+        type: b1
+      - id: upside_down
+        type: b1
+      - id: backwards
+        type: b1
+      - id: flag8
+        type: b1
 enums:
   entities:
     1: line
