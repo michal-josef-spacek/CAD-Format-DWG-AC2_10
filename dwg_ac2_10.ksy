@@ -1105,8 +1105,9 @@ types:
         type: b1
   view:
     seq:
-      - id: u1
-        size: 1
+      - id: flag
+        type: view_flag
+        doc: VIEW/70 TODO
       - id: view_name
         size: 31
         type: str
@@ -1137,6 +1138,24 @@ types:
         doc: VIEW/31
       - id: u3
         type: u2
+  view_flag:
+    seq:
+      - id: flag1
+        type: b1
+      - id: flag2
+        type: b1
+      - id: flag3
+        type: b1
+      - id: flag4
+        type: b1
+      - id: flag5
+        type: b1
+      - id: flag6
+        type: b1
+      - id: flag7
+        type: b1
+      - id: flag8
+        type: b1
   generation_flags:
     seq:
       - id: flag1
