@@ -1,7 +1,6 @@
 TODO
 ====
 3. BLANK.DWG on one place.
-5. Rename text_style() to text_style_index()?
 8.
 
 Applied
@@ -19,4 +18,7 @@ OK [20211110] skim
 OK [20211110] skim
 
 4. Rename current_layer() to current_layer_index()?
+OK [20220213] skim
+
+5. Rename text_style() to text_style_index()?
 OK [20220213] skim
