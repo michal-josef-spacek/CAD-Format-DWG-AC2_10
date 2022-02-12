@@ -32,7 +32,7 @@ t/CAD-Format-DWG-AC2_10/010-header-blocks_size.t
 t/CAD-Format-DWG-AC2_10/011-header-blocks_size_a.t
 t/CAD-Format-DWG-AC2_10/012-header-blocks_size_b.t
 t/CAD-Format-DWG-AC2_10/013-header-blocks_start.t
-t/CAD-Format-DWG-AC2_10/014-header-current_layer.t
+t/CAD-Format-DWG-AC2_10/014-header-current_layer_index.t
 t/CAD-Format-DWG-AC2_10/015-header-dim_arrowhead_size.t
 t/CAD-Format-DWG-AC2_10/016-header-dim_baseline_spacing.t
 t/CAD-Format-DWG-AC2_10/017-header-dim_center_mark_control.t
@@ -146,8 +146,8 @@ t/data/header/blocks_size/BLOCK2.DWG
 t/data/header/blocks_start/BLANK.DWG
 t/data/header/blocks_start/BLOCK1.DWG
 t/data/header/blocks_start/BLOCK2.DWG
-t/data/header/current_layer/BLANK.DWG
-t/data/header/current_layer/CURLAY1.DWG
+t/data/header/current_layer_index/BLANK.DWG
+t/data/header/current_layer_index/CURLAY1.DWG
 t/data/header/dim_arrowhead_size/BLANK.DWG
 t/data/header/dim_baseline_spacing/BLANK.DWG
 t/data/header/dim_center_mark_control/BLANK.DWG
