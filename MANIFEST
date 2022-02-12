@@ -124,10 +124,12 @@ t/CAD-Format-DWG-AC2_10/102-header-view_point_z.t
 t/CAD-Format-DWG-AC2_10/103-header-view_size.t
 t/CAD-Format-DWG-AC2_10/104-header-zeros.t
 t/CAD-Format-DWG-AC2_10/105-header-zero_one_or_three.t
-t/CAD-Format-DWG-AC2_10/106-layers-color.t
-t/CAD-Format-DWG-AC2_10/107-layers-flag-frozen.t
-t/CAD-Format-DWG-AC2_10/108-layers-layer_name.t
-t/CAD-Format-DWG-AC2_10/109-layers-linetype_index.t
+t/CAD-Format-DWG-AC2_10/106-entities-line.t
+t/CAD-Format-DWG-AC2_10/107-layers-color.t
+t/CAD-Format-DWG-AC2_10/108-layers-flag-frozen.t
+t/CAD-Format-DWG-AC2_10/109-layers-layer_name.t
+t/CAD-Format-DWG-AC2_10/110-layers-linetype_index.t
+t/data/entity/line/LINE1.DWG
 t/data/header/angular_precision/BLANK.DWG
 t/data/header/attributes/BLANK.DWG
 t/data/header/axis/AXIS_ON.DWG
