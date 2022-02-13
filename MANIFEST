@@ -139,6 +139,7 @@ t/data/entity/line/LINE1.DWG
 t/data/entity/point/POINT1.DWG
 t/data/entity/point/POINT2.DWG
 t/data/entity/polyline2/PLINE1.DWG
+t/data/entity/vertex/PLINE1.DWG
 t/data/header/angular_precision/BLANK.DWG
 t/data/header/attributes/BLANK.DWG
 t/data/header/axis/AXIS_ON.DWG
