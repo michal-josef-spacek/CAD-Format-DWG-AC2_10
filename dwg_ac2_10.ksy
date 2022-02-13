@@ -1107,7 +1107,7 @@ types:
     seq:
       - id: flag
         type: view_flag
-        doc: VIEW/70 TODO
+        doc: VIEW/70
       - id: view_name
         size: 31
         type: str
