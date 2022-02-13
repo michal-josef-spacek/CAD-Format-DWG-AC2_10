@@ -3,7 +3,7 @@ use warnings;
 
 use CAD::Format::DWG::AC2_10;
 use File::Object;
-use Test::More 'tests' => 6;
+use Test::More 'tests' => 7;
 use Test::NoWarnings;
 
 # Data directory.
@@ -19,6 +19,7 @@ is($entity1->entity_type, 19, 'Get entity type (19).');
 my $pline1_data = $entity1->data;
 my $entity_common = $pline1_data->entity_common;
 is($entity_common->entity_layer_index, 0, 'Point layer index (0).');
+is($entity_common->entity_size, 9, 'Entity size (9).');
 is($pline1_data->closed, 1, 'Polyline is closed.');
 my $entities = @{$obj->entities->entities};
 is($entities, 6, 'Number of entities (6).');

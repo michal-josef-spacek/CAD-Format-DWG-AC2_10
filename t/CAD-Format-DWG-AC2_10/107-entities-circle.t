@@ -3,7 +3,7 @@ use warnings;
 
 use CAD::Format::DWG::AC2_10;
 use File::Object;
-use Test::More 'tests' => 8;
+use Test::More 'tests' => 9;
 use Test::NoWarnings;
 
 # Data directory.
@@ -19,6 +19,7 @@ is($entity1->entity_type, 3, 'Get entity type (3).');
 my $circle1_data = $entity1->data;
 my $entity_common = $circle1_data->entity_common;
 is($entity_common->entity_layer_index, 0, 'Line layer index (0).');
+is($entity_common->entity_size, 32, 'Entity size (32).');
 is($circle1_data->x, 1.2345, 'Circle x (1.2345).');
 is($circle1_data->y, 2.3456, 'Circle y (2.3456).');
 is($circle1_data->radius, 15, 'Circle radius (15).');

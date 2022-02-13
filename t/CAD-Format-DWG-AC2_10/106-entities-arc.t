@@ -3,7 +3,7 @@ use warnings;
 
 use CAD::Format::DWG::AC2_10;
 use File::Object;
-use Test::More 'tests' => 10;
+use Test::More 'tests' => 11;
 use Test::NoWarnings;
 
 # Data directory.
@@ -19,6 +19,7 @@ is($entity1->entity_type, 8, 'Get entity type (8).');
 my $arc1_data = $entity1->data;
 my $entity_common = $arc1_data->entity_common;
 is($entity_common->entity_layer_index, 0, 'Arc layer index (0).');
+is($entity_common->entity_size, 48, 'Entity size (48).');
 # XXX Construct precise values
 is($arc1_data->x, 1.5, 'Arc x (1.5).');
 is($arc1_data->y, -0.5, 'Arc y (-0.5).');
