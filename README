@@ -64,6 +64,14 @@ METHODS
     Returns reference to array with CAD::Format::DWG::AC2_10::Layer
     instances.
 
+  "linetypes"
+     my $linetypes_ar = $dwg->linetypes;
+
+    Get list of line types in DWG file.
+
+    Returns reference to array with CAD::Format::DWG::AC2_10::Linetype
+    instances.
+
   "styles"
      my $styles_ar = $dwg->styles;
 

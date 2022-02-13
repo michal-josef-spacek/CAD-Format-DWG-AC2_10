@@ -76,6 +76,14 @@ Get list of layers in DWG file.
 
 Returns reference to array with CAD::Format::DWG::AC2_10::Layer instances.
 
+=head2 C<linetypes>
+
+ my $linetypes_ar = $dwg->linetypes;
+
+Get list of line types in DWG file.
+
+Returns reference to array with CAD::Format::DWG::AC2_10::Linetype instances.
+
 =head2 C<styles>
 
  my $styles_ar = $dwg->styles;
