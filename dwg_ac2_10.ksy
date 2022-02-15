@@ -121,7 +121,9 @@ types:
       - id: unknown4e
         size: 2
       - id: table_block_begin
-        type: u4
+        type: u2
+      - id: unknown4f
+        size: 2
       - id: table_layer_item_size
         type: u2
       - id: table_layer_items
@@ -129,7 +131,9 @@ types:
       - id: unknown4g
         size: 2
       - id: table_layer_begin
-        type: u4
+        type: u2
+      - id: unknown4h
+        size: 2
       - id: table_style_item_size
         type: u2
       - id: table_style_items
@@ -137,7 +141,9 @@ types:
       - id: unknown4i
         size: 2
       - id: table_style_begin
-        type: u4
+        type: u2
+      - id: unknown4j
+        size: 2
       - id: table_linetype_item_size
         type: u2
       - id: table_linetype_items
@@ -145,7 +151,9 @@ types:
       - id: unknown4k
         size: 2
       - id: table_linetype_begin
-        type: u4
+        type: u2
+      - id: unknown4l
+        size: 2
       - id: table_view_item_size
         type: u2
       - id: table_view_items
