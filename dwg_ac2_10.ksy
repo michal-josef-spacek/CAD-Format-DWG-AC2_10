@@ -277,10 +277,19 @@ types:
         doc: 0x014a-0x014b, $CLAYER
       - id: unknown5
         type: s2
-        doc: 0x014c-0x014d
+        doc: 0x014c-0x014d, (2, 3, 8, 15 - default)
       - id: unknown6
-        size: 14
-        doc: 0x0143-0x015b
+        type: f8
+        doc: 0x014e-0x0155
+      - id: unknown7a
+        type: s2
+        doc: 0x0156-0x0157
+      - id: unknown7b
+        type: s2
+        doc: 0x0158-0x0159
+      - id: unknown7c
+        type: s2
+        doc: 0x015a-0x015b
       - id: unknown8
         type: f8
         doc: 0x015c-0x0163
