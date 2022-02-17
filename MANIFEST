@@ -224,6 +224,16 @@ t/data/header/number_of_entities/BLANK.DWG
 t/data/header/ortho/BLANK.DWG
 t/data/header/ortho/ORTHO_ON.DWG
 t/data/header/osnap/BLANK.DWG
+t/data/header/osnap/OSNAP1.DWG
+t/data/header/osnap/OSNAP10.DWG
+t/data/header/osnap/OSNAP2.DWG
+t/data/header/osnap/OSNAP3.DWG
+t/data/header/osnap/OSNAP4.DWG
+t/data/header/osnap/OSNAP5.DWG
+t/data/header/osnap/OSNAP6.DWG
+t/data/header/osnap/OSNAP7.DWG
+t/data/header/osnap/OSNAP8.DWG
+t/data/header/osnap/OSNAP9.DWG
 t/data/header/qtext/BLANK.DWG
 t/data/header/regen/BLANK.DWG
 t/data/header/sketch_increment/BLANK.DWG
