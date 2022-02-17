@@ -1021,25 +1021,21 @@ types:
         type: b1
   linetype:
     seq:
-      - id: u2
-        type: u1
+      - id: flag
+        type: linetype_flag
         doc: LTYPE/70
       - id: linetype_name
-        size: 31
+        size: 32
         type: str
         encoding: ASCII
         terminator: 0x00
         doc: LTYPE/2
-      - id: u3
-        type: u1
       - id: description
-        size: 44
+        size: 48
         type: str
         encoding: ASCII
         terminator: 0x00
         doc: LTYPE/3
-      - id: u5
-        size: 4
       - id: alignment
         type: u1
         doc: LTYPE/72
@@ -1049,42 +1045,53 @@ types:
       - id: pattern_len
         type: f8
         doc: LTYPE/40
-      - id: u9
-        type: f8
+      - id: pattern
+        type: pattern
         doc: LTYPE/49
-      - id: u10
+  pattern:
+    seq:
+      - id: pattern1
         type: f8
-        doc: LTYPE/49
-      - id: u11
+      - id: pattern2
         type: f8
-        doc: LTYPE/49
-      - id: u12
+      - id: pattern3
         type: f8
-        doc: LTYPE/49
-      - id: u13
+      - id: pattern4
         type: f8
-        doc: LTYPE/49
-      - id: u14
+      - id: pattern5
         type: f8
-        doc: LTYPE/49
-      - id: u15
+      - id: pattern6
         type: f8
-        doc: LTYPE/49
-      - id: u16
+      - id: pattern7
         type: f8
-        doc: LTYPE/49
-      - id: u17
+      - id: pattern8
         type: f8
-        doc: LTYPE/49
-      - id: u18
+      - id: pattern9
         type: f8
-        doc: LTYPE/49
-      - id: u19
+      - id: pattern10
         type: f8
-        doc: LTYPE/49
-      - id: u20
+      - id: pattern11
         type: f8
-        doc: LTYPE/49
+      - id: pattern12
+        type: f8
+  linetype_flag:
+    seq:
+      - id: flag1
+        type: b1
+      - id: flag2
+        type: b1
+      - id: flag3
+        type: b1
+      - id: flag4
+        type: b1
+      - id: flag5
+        type: b1
+      - id: flag6
+        type: b1
+      - id: flag7
+        type: b1
+      - id: frozen
+        type: b1
   real_entities:
     seq:
       - id: entities
