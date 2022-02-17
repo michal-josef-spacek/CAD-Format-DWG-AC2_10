@@ -275,21 +275,12 @@ types:
       - id: current_layer_index
         type: s2
         doc: 0x014a-0x014b, $CLAYER
+      - id: unknown5
+        type: s2
+        doc: 0x014c-0x014d
       - id: unknown6
-        type: f8
-        doc: 0x014c-0x0153
-      - id: unknown7a
-        size: 2
-        doc: 0x0154-0x0155
-      - id: unknown7b
-        size: 2
-        doc: 0x0156-0x0157
-      - id: unknown7c
-        size: 2
-        doc: 0x0158-0x0159
-      - id: unknown7d
-        size: 2
-        doc: 0x015a-0x015b
+        size: 14
+        doc: 0x0143-0x015b
       - id: unknown8
         type: f8
         doc: 0x015c-0x0163
