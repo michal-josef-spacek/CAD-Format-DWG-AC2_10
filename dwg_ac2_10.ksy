@@ -901,6 +901,9 @@ types:
         type: s2
       - id: value
         size: size
+        type: str
+        encoding: ASCII
+        terminator: 0x00
         doc: TEXT/1
       - id: angle
         type: f8
