@@ -3,7 +3,9 @@ TODO
 3. BLANK.DWG on one place.
 8. Rewrite header of entity
 9. What about current_color enum?
-10.
+10. Add 2d point and rewrite to it
+11. Add 3d point and rewrite to it
+12.
 
 Applied
 =======
