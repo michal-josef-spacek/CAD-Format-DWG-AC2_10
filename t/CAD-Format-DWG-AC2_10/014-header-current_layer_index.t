@@ -13,10 +13,10 @@ my $data_dir = File::Object->new->up->dir('data/header/current_layer_index')->se
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->current_layer_index, 0, 'Current layer index (0 - default).');
+is($obj->header->variables->current_layer_index, 0, 'Current layer index (0 - default).');
 
 # Test.
 $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('CURLAY1.DWG')->s,
 );
-is($obj->header->current_layer_index, 1, 'Current layer index (1).');
+is($obj->header->variables->current_layer_index, 1, 'Current layer index (1).');

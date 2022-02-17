@@ -162,6 +162,15 @@ types:
         size: 2
       - id: table_view_begin
         type: u4
+      - id: variables
+        type: header_variables
+    instances:
+      blocks_size_a:
+         value: (blocks_size & 0xff000000) >> 24
+      blocks_size_b:
+         value: (blocks_size & 0x00ffffff)
+  header_variables:
+    seq:
       - id: insertion_base_x
         type: f8
         doc: 0x005e-0x0065, $INSBASE/10
@@ -418,11 +427,6 @@ types:
       - id: blip
         type: s2
         doc: 0x02e3-0x02e4, $BLIPMODE
-    instances:
-      blocks_size_a:
-         value: (blocks_size & 0xff000000) >> 24
-      blocks_size_b:
-         value: (blocks_size & 0x00ffffff)
   unknown_repeating:
     seq:
       - id: unknown_repeating1

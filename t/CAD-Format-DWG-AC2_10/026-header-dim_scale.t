@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/dim_scale')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->dim_scale, 1, 'Dim scale (1 - default).');
+is($obj->header->variables->dim_scale, 1, 'Dim scale (1 - default).');

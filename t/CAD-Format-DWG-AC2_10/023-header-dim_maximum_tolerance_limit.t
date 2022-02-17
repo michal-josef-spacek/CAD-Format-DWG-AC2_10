@@ -13,5 +13,5 @@ my $data_dir = File::Object->new->up->dir('data/header/dim_maximum_tolerance_lim
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->dim_maximum_tolerance_limit, 0,
+is($obj->header->variables->dim_maximum_tolerance_limit, 0,
 	'Dim maximum tolerance limit (0 - default).');

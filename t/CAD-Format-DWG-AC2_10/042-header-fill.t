@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/fill')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->fill, 1, 'Fill (1 - default).');
+is($obj->header->variables->fill, 1, 'Fill (1 - default).');

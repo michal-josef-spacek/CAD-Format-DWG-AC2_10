@@ -13,5 +13,5 @@ my $data_dir = File::Object->new->up->dir('data/header/dim_extension_line_first_
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->dim_extension_line_first_suppress, 0,
+is($obj->header->variables->dim_extension_line_first_suppress, 0,
 	'Dim extension line first suppress (0 - default).');

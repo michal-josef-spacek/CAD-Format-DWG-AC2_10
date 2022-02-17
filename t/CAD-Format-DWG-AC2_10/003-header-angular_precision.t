@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/angular_precision')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->angular_precision, 0, 'Angular precision (0 - default).');
+is($obj->header->variables->angular_precision, 0, 'Angular precision (0 - default).');

@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/text_style_index')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->text_style_index, 0, 'Text style index (0 - default).');
+is($obj->header->variables->text_style_index, 0, 'Text style index (0 - default).');

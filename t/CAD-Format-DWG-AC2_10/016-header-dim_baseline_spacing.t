@@ -13,5 +13,5 @@ my $data_dir = File::Object->new->up->dir('data/header/dim_baseline_spacing')->s
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->dim_baseline_spacing, 0.38,
+is($obj->header->variables->dim_baseline_spacing, 0.38,
 	'Dim baseline spacing (0.38 - default).');

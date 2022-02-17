@@ -13,5 +13,5 @@ my $data_dir = File::Object->new->up->dir('data/header/dim_text_vertical_positio
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->dim_text_vertical_position, 0,
+is($obj->header->variables->dim_text_vertical_position, 0,
 	'Dim text vertical position (0 - default).');

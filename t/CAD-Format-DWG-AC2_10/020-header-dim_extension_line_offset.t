@@ -13,5 +13,5 @@ my $data_dir = File::Object->new->up->dir('data/header/dim_extension_line_offset
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->dim_extension_line_offset, 0.0625,
+is($obj->header->variables->dim_extension_line_offset, 0.0625,
 	'Dim extension line offset (0.0625 - default).');

@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/qtext')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->qtext, 0, 'Qtext mode (0 - off/default).');
+is($obj->header->variables->qtext, 0, 'Qtext mode (0 - off/default).');

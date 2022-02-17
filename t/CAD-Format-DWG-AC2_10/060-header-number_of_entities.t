@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/number_of_entities')->set
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->number_of_entities, 0, 'Number of entities (0).');
+is($obj->header->variables->number_of_entities, 0, 'Number of entities (0).');

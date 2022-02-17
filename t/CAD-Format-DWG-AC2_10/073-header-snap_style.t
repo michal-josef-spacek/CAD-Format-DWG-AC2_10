@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/snap_style')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->snap_style, 0, 'Snap style (0).');
+is($obj->header->variables->snap_style, 0, 'Snap style (0).');

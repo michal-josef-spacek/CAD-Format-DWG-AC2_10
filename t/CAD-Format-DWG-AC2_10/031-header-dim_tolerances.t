@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/dim_tolerances')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->dim_tolerances, 0, 'Dim tolerances (0 - default).');
+is($obj->header->variables->dim_tolerances, 0, 'Dim tolerances (0 - default).');

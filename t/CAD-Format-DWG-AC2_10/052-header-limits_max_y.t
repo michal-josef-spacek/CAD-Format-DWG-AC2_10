@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/limits_max_y')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->limits_max_y, 9, 'Maximum limit y (9 - default).');
+is($obj->header->variables->limits_max_y, 9, 'Maximum limit y (9 - default).');

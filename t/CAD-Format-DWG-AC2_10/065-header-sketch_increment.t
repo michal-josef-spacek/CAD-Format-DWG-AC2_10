@@ -13,10 +13,10 @@ my $data_dir = File::Object->new->up->dir('data/header/sketch_increment')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->sketch_increment, 0.1, 'Sketch increment (0.1 - default).');
+is($obj->header->variables->sketch_increment, 0.1, 'Sketch increment (0.1 - default).');
 
 # Test.
 $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('SKETCH1.DWG')->s,
 );
-is($obj->header->sketch_increment, 1.2345, 'Sketch increment (1.2345).');
+is($obj->header->variables->sketch_increment, 1.2345, 'Sketch increment (1.2345).');

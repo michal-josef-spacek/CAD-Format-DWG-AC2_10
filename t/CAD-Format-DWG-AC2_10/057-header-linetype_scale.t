@@ -13,10 +13,10 @@ my $data_dir = File::Object->new->up->dir('data/header/linetype_scale')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->linetype_scale, 1, 'Linetype scale (1 - default).');
+is($obj->header->variables->linetype_scale, 1, 'Linetype scale (1 - default).');
 
 # Test.
 $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('LTSCALE1.DWG')->s,
 );
-is($obj->header->linetype_scale, 1.2345, 'Linetype scale (1).');
+is($obj->header->variables->linetype_scale, 1.2345, 'Linetype scale (1).');

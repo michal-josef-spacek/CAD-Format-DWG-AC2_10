@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/regen')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->regen, 1, 'Regen mode (1 - on/default).');
+is($obj->header->variables->regen, 1, 'Regen mode (1 - on/default).');

@@ -13,5 +13,5 @@ my $data_dir = File::Object->new->up->dir('data/header/dim_center_mark_control')
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->dim_center_mark_control, 0.09,
+is($obj->header->variables->dim_center_mark_control, 0.09,
 	'Dim center mark control (0.09 - default).');

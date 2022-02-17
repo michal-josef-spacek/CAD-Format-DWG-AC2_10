@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/grid')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->grid, 0, 'Grid (0 - default).');
+is($obj->header->variables->grid, 0, 'Grid (0 - default).');

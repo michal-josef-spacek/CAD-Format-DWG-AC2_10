@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/linear_units_precision')-
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->linear_units_precision, 4, 'Linear units precision (4 - default).');
+is($obj->header->variables->linear_units_precision, 4, 'Linear units precision (4 - default).');

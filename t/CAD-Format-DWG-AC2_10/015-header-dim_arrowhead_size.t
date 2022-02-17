@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/dim_arrowhead_size')->set
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->dim_arrowhead_size, 0.18, 'Dim arrowhead size (0.18 - default).');
+is($obj->header->variables->dim_arrowhead_size, 0.18, 'Dim arrowhead size (0.18 - default).');

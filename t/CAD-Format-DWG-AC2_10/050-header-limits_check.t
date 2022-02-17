@@ -13,10 +13,10 @@ my $data_dir = File::Object->new->up->dir('data/header/limits_check')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('LIM_OFF.DWG')->s,
 );
-is($obj->header->limits_check, 0, 'Limits check (0 - off/default).');
+is($obj->header->variables->limits_check, 0, 'Limits check (0 - off/default).');
 
 # Test.
 $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('LIM_ON.DWG')->s,
 );
-is($obj->header->limits_check, 1, 'Limits check (1 - on).');
+is($obj->header->variables->limits_check, 1, 'Limits check (1 - on).');

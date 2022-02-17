@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/units_for_angles')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->units_for_angles, 0, 'Units for angles (0 - default).');
+is($obj->header->variables->units_for_angles, 0, 'Units for angles (0 - default).');

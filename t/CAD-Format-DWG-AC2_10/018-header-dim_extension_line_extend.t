@@ -13,5 +13,5 @@ my $data_dir = File::Object->new->up->dir('data/header/dim_extension_line_extend
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->dim_extension_line_extend, 0.18,
+is($obj->header->variables->dim_extension_line_extend, 0.18,
 	'Dim extension line extend (0.18 - default).');
