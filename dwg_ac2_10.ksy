@@ -411,42 +411,8 @@ types:
       - id: view_point_z
         type: f8
         doc: 0x024a-0x0251, $VIEWDIR/30
-      - id: unknown11
-        type: f8
-      - id: unknown12
-        type: f8
-      - id: unknown13
-        type: f8
-      - id: unknown14
-        type: f8
-      - id: unknown15
-        type: f8
-      - id: unknown16
-        type: f8
-      - id: unknown17
-        type: f8
-      - id: unknown18
-        type: f8
-      - id: unknown19
-        type: f8
-      - id: unknown20
-        type: f8
-      - id: unknown21
-        type: f8
-      - id: unknown22
-        type: f8
-      - id: unknown23
-        type: f8
-      - id: unknown24
-        type: f8
-      - id: unknown25
-        type: f8
-      - id: unknown26
-        type: f8
-      - id: unknown27
-        type: f8
-      - id: unknown28
-        type: f8
+      - id: unknown_repeating
+        type: unknown_repeating
       - id: unknown29
         type: s2
       - id: blip
@@ -457,6 +423,44 @@ types:
          value: (blocks_size & 0xff000000) >> 24
       blocks_size_b:
          value: (blocks_size & 0x00ffffff)
+  unknown_repeating:
+    seq:
+      - id: unknown_repeating1
+        type: f8
+      - id: unknown_repeating2
+        type: f8
+      - id: unknown_repeating3
+        type: f8
+      - id: unknown_repeating4
+        type: f8
+      - id: unknown_repeating5
+        type: f8
+      - id: unknown_repeating6
+        type: f8
+      - id: unknown_repeating7
+        type: f8
+      - id: unknown_repeating8
+        type: f8
+      - id: unknown_repeating9
+        type: f8
+      - id: unknown_repeating10
+        type: f8
+      - id: unknown_repeating11
+        type: f8
+      - id: unknown_repeating12
+        type: f8
+      - id: unknown_repeating13
+        type: f8
+      - id: unknown_repeating14
+        type: f8
+      - id: unknown_repeating15
+        type: f8
+      - id: unknown_repeating16
+        type: f8
+      - id: unknown_repeating17
+        type: f8
+      - id: unknown_repeating18
+        type: f8
   entity:
     seq:
       - id: entity_type
