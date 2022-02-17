@@ -1291,6 +1291,56 @@ sub load {
 }
 
 ########################################################################
+package CAD::Format::DWG::AC2_10::Point3d;
+
+our @ISA = 'IO::KaitaiStruct::Struct';
+
+sub from_file {
+    my ($class, $filename) = @_;
+    my $fd;
+
+    open($fd, '<', $filename) or return undef;
+    binmode($fd);
+    return new($class, IO::KaitaiStruct::Stream->new($fd));
+}
+
+sub new {
+    my ($class, $_io, $_parent, $_root) = @_;
+    my $self = IO::KaitaiStruct::Struct->new($_io);
+
+    bless $self, $class;
+    $self->{_parent} = $_parent;
+    $self->{_root} = $_root || $self;;
+
+    $self->_read();
+
+    return $self;
+}
+
+sub _read {
+    my ($self) = @_;
+
+    $self->{x} = $self->{_io}->read_f8le();
+    $self->{y} = $self->{_io}->read_f8le();
+    $self->{z} = $self->{_io}->read_f8le();
+}
+
+sub x {
+    my ($self) = @_;
+    return $self->{x};
+}
+
+sub y {
+    my ($self) = @_;
+    return $self->{y};
+}
+
+sub z {
+    my ($self) = @_;
+    return $self->{z};
+}
+
+########################################################################
 package CAD::Format::DWG::AC2_10::EntityBlockEnd;
 
 our @ISA = 'IO::KaitaiStruct::Struct';
@@ -1466,6 +1516,50 @@ sub unknown_repeating17 {
 sub unknown_repeating18 {
     my ($self) = @_;
     return $self->{unknown_repeating18};
+}
+
+########################################################################
+package CAD::Format::DWG::AC2_10::Point2d;
+
+our @ISA = 'IO::KaitaiStruct::Struct';
+
+sub from_file {
+    my ($class, $filename) = @_;
+    my $fd;
+
+    open($fd, '<', $filename) or return undef;
+    binmode($fd);
+    return new($class, IO::KaitaiStruct::Stream->new($fd));
+}
+
+sub new {
+    my ($class, $_io, $_parent, $_root) = @_;
+    my $self = IO::KaitaiStruct::Struct->new($_io);
+
+    bless $self, $class;
+    $self->{_parent} = $_parent;
+    $self->{_root} = $_root || $self;;
+
+    $self->_read();
+
+    return $self;
+}
+
+sub _read {
+    my ($self) = @_;
+
+    $self->{x} = $self->{_io}->read_f8le();
+    $self->{y} = $self->{_io}->read_f8le();
+}
+
+sub x {
+    my ($self) = @_;
+    return $self->{x};
+}
+
+sub y {
+    my ($self) = @_;
+    return $self->{y};
 }
 
 ########################################################################
@@ -2412,35 +2506,22 @@ sub new {
 sub _read {
     my ($self) = @_;
 
-    $self->{insertion_base_x} = $self->{_io}->read_f8le();
-    $self->{insertion_base_y} = $self->{_io}->read_f8le();
-    $self->{insertion_base_z} = $self->{_io}->read_f8le();
+    $self->{insertion_base} = CAD::Format::DWG::AC2_10::Point3d->new($self->{_io}, $self, $self->{_root});
     $self->{number_of_entities} = $self->{_io}->read_u2le();
-    $self->{drawing_first_x} = $self->{_io}->read_f8le();
-    $self->{drawing_first_y} = $self->{_io}->read_f8le();
-    $self->{drawing_first_z} = $self->{_io}->read_f8le();
-    $self->{drawing_second_x} = $self->{_io}->read_f8le();
-    $self->{drawing_second_y} = $self->{_io}->read_f8le();
-    $self->{drawing_second_z} = $self->{_io}->read_f8le();
-    $self->{limits_min_x} = $self->{_io}->read_f8le();
-    $self->{limits_min_y} = $self->{_io}->read_f8le();
-    $self->{limits_max_x} = $self->{_io}->read_f8le();
-    $self->{limits_max_y} = $self->{_io}->read_f8le();
-    $self->{view_ctrl_x} = $self->{_io}->read_f8le();
-    $self->{view_ctrl_y} = $self->{_io}->read_f8le();
-    $self->{view_ctrl_z} = $self->{_io}->read_f8le();
+    $self->{drawing_first} = CAD::Format::DWG::AC2_10::Point3d->new($self->{_io}, $self, $self->{_root});
+    $self->{drawing_second} = CAD::Format::DWG::AC2_10::Point3d->new($self->{_io}, $self, $self->{_root});
+    $self->{limits_min} = CAD::Format::DWG::AC2_10::Point2d->new($self->{_io}, $self, $self->{_root});
+    $self->{limits_max} = CAD::Format::DWG::AC2_10::Point2d->new($self->{_io}, $self, $self->{_root});
+    $self->{view_ctrl} = CAD::Format::DWG::AC2_10::Point3d->new($self->{_io}, $self, $self->{_root});
     $self->{view_size} = $self->{_io}->read_f8le();
     $self->{snap} = $self->{_io}->read_s2le();
-    $self->{snap_resolution_x} = $self->{_io}->read_f8le();
-    $self->{snap_resolution_y} = $self->{_io}->read_f8le();
-    $self->{snap_base_x} = $self->{_io}->read_f8le();
-    $self->{snap_base_y} = $self->{_io}->read_f8le();
+    $self->{snap_resolution} = CAD::Format::DWG::AC2_10::Point2d->new($self->{_io}, $self, $self->{_root});
+    $self->{snap_base} = CAD::Format::DWG::AC2_10::Point2d->new($self->{_io}, $self, $self->{_root});
     $self->{snap_angle} = $self->{_io}->read_f8le();
     $self->{snap_style} = $self->{_io}->read_s2le();
     $self->{snap_iso_pair} = $self->{_io}->read_s2le();
     $self->{grid} = $self->{_io}->read_s2le();
-    $self->{grid_unit_x} = $self->{_io}->read_f8le();
-    $self->{grid_unit_y} = $self->{_io}->read_f8le();
+    $self->{grid_unit} = CAD::Format::DWG::AC2_10::Point2d->new($self->{_io}, $self, $self->{_root});
     $self->{ortho} = $self->{_io}->read_s2le();
     $self->{regen} = $self->{_io}->read_s2le();
     $self->{fill} = $self->{_io}->read_s2le();
@@ -2459,8 +2540,7 @@ sub _read {
     $self->{linear_units_format} = $self->{_io}->read_s2le();
     $self->{linear_units_precision} = $self->{_io}->read_s2le();
     $self->{axis} = $self->{_io}->read_s2le();
-    $self->{axis_value_x} = $self->{_io}->read_f8le();
-    $self->{axis_value_y} = $self->{_io}->read_f8le();
+    $self->{axis_value} = CAD::Format::DWG::AC2_10::Point2d->new($self->{_io}, $self, $self->{_root});
     $self->{sketch_increment} = $self->{_io}->read_f8le();
     $self->{fillet_radius} = $self->{_io}->read_f8le();
     $self->{units_for_angles} = $self->{_io}->read_s2le();
@@ -2490,27 +2570,15 @@ sub _read {
     $self->{unknown10} = $self->{_io}->read_bytes(45);
     $self->{elevation} = $self->{_io}->read_f8le();
     $self->{thickness} = $self->{_io}->read_f8le();
-    $self->{view_point_x} = $self->{_io}->read_f8le();
-    $self->{view_point_y} = $self->{_io}->read_f8le();
-    $self->{view_point_z} = $self->{_io}->read_f8le();
+    $self->{view_point} = CAD::Format::DWG::AC2_10::Point3d->new($self->{_io}, $self, $self->{_root});
     $self->{unknown_repeating} = CAD::Format::DWG::AC2_10::UnknownRepeating->new($self->{_io}, $self, $self->{_root});
     $self->{unknown29} = $self->{_io}->read_s2le();
     $self->{blip} = $self->{_io}->read_s2le();
 }
 
-sub insertion_base_x {
+sub insertion_base {
     my ($self) = @_;
-    return $self->{insertion_base_x};
-}
-
-sub insertion_base_y {
-    my ($self) = @_;
-    return $self->{insertion_base_y};
-}
-
-sub insertion_base_z {
-    my ($self) = @_;
-    return $self->{insertion_base_z};
+    return $self->{insertion_base};
 }
 
 sub number_of_entities {
@@ -2518,69 +2586,29 @@ sub number_of_entities {
     return $self->{number_of_entities};
 }
 
-sub drawing_first_x {
+sub drawing_first {
     my ($self) = @_;
-    return $self->{drawing_first_x};
+    return $self->{drawing_first};
 }
 
-sub drawing_first_y {
+sub drawing_second {
     my ($self) = @_;
-    return $self->{drawing_first_y};
+    return $self->{drawing_second};
 }
 
-sub drawing_first_z {
+sub limits_min {
     my ($self) = @_;
-    return $self->{drawing_first_z};
+    return $self->{limits_min};
 }
 
-sub drawing_second_x {
+sub limits_max {
     my ($self) = @_;
-    return $self->{drawing_second_x};
+    return $self->{limits_max};
 }
 
-sub drawing_second_y {
+sub view_ctrl {
     my ($self) = @_;
-    return $self->{drawing_second_y};
-}
-
-sub drawing_second_z {
-    my ($self) = @_;
-    return $self->{drawing_second_z};
-}
-
-sub limits_min_x {
-    my ($self) = @_;
-    return $self->{limits_min_x};
-}
-
-sub limits_min_y {
-    my ($self) = @_;
-    return $self->{limits_min_y};
-}
-
-sub limits_max_x {
-    my ($self) = @_;
-    return $self->{limits_max_x};
-}
-
-sub limits_max_y {
-    my ($self) = @_;
-    return $self->{limits_max_y};
-}
-
-sub view_ctrl_x {
-    my ($self) = @_;
-    return $self->{view_ctrl_x};
-}
-
-sub view_ctrl_y {
-    my ($self) = @_;
-    return $self->{view_ctrl_y};
-}
-
-sub view_ctrl_z {
-    my ($self) = @_;
-    return $self->{view_ctrl_z};
+    return $self->{view_ctrl};
 }
 
 sub view_size {
@@ -2593,24 +2621,14 @@ sub snap {
     return $self->{snap};
 }
 
-sub snap_resolution_x {
+sub snap_resolution {
     my ($self) = @_;
-    return $self->{snap_resolution_x};
+    return $self->{snap_resolution};
 }
 
-sub snap_resolution_y {
+sub snap_base {
     my ($self) = @_;
-    return $self->{snap_resolution_y};
-}
-
-sub snap_base_x {
-    my ($self) = @_;
-    return $self->{snap_base_x};
-}
-
-sub snap_base_y {
-    my ($self) = @_;
-    return $self->{snap_base_y};
+    return $self->{snap_base};
 }
 
 sub snap_angle {
@@ -2633,14 +2651,9 @@ sub grid {
     return $self->{grid};
 }
 
-sub grid_unit_x {
+sub grid_unit {
     my ($self) = @_;
-    return $self->{grid_unit_x};
-}
-
-sub grid_unit_y {
-    my ($self) = @_;
-    return $self->{grid_unit_y};
+    return $self->{grid_unit};
 }
 
 sub ortho {
@@ -2733,14 +2746,9 @@ sub axis {
     return $self->{axis};
 }
 
-sub axis_value_x {
+sub axis_value {
     my ($self) = @_;
-    return $self->{axis_value_x};
-}
-
-sub axis_value_y {
-    my ($self) = @_;
-    return $self->{axis_value_y};
+    return $self->{axis_value};
 }
 
 sub sketch_increment {
@@ -2888,19 +2896,9 @@ sub thickness {
     return $self->{thickness};
 }
 
-sub view_point_x {
+sub view_point {
     my ($self) = @_;
-    return $self->{view_point_x};
-}
-
-sub view_point_y {
-    my ($self) = @_;
-    return $self->{view_point_y};
-}
-
-sub view_point_z {
-    my ($self) = @_;
-    return $self->{view_point_z};
+    return $self->{view_point};
 }
 
 sub unknown_repeating {

@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/view_ctrl_y')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->variables->view_ctrl_y, 4.5, 'View ctrl y (4.5 - default).');
+is($obj->header->variables->view_ctrl->y, 4.5, 'View ctrl y (4.5 - default).');

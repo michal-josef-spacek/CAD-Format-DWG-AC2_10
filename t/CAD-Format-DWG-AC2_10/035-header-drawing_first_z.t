@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/drawing_first_z')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->variables->drawing_first_z, 0, 'Drawing first z (0).');
+is($obj->header->variables->drawing_first->z, 0, 'Drawing first z (0).');

@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/snap_base_x')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->variables->snap_base_x, 0, 'Snap base x (0 - default).');
+is($obj->header->variables->snap_base->x, 0, 'Snap base x (0 - default).');

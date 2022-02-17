@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/view_point_x')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->variables->view_point_x, 0, 'View point x (0 - default).');
+is($obj->header->variables->view_point->x, 0, 'View point x (0 - default).');

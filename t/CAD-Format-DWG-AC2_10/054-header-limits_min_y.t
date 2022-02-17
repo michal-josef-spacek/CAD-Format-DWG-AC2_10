@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/limits_min_y')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->variables->limits_min_y, 0, 'Minimum limit y (0 - default).');
+is($obj->header->variables->limits_min->y, 0, 'Minimum limit y (0 - default).');

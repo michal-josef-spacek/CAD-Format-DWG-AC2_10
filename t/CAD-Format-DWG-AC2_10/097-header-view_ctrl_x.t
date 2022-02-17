@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/view_ctrl_x')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->variables->view_ctrl_x, 7.37814432989691, 'View ctrl x (7.37814432989691 - default).');
+is($obj->header->variables->view_ctrl->x, 7.37814432989691, 'View ctrl x (7.37814432989691 - default).');

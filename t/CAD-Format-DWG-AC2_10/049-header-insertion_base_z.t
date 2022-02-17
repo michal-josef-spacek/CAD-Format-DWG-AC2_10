@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/insertion_base_z')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->variables->insertion_base_z, 0, 'Insertion base z.');
+is($obj->header->variables->insertion_base->z, 0, 'Insertion base z.');

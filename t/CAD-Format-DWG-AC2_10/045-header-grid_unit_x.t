@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/grid_unit_x')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->variables->grid_unit_x, 0, 'Grid unit x (0 - default).');
+is($obj->header->variables->grid_unit->x, 0, 'Grid unit x (0 - default).');
