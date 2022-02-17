@@ -398,10 +398,10 @@ types:
         size: 45
       - id: elevation
         type: f8
-        doc: $ELEVATION
+        doc: 0x0229-0x0230, $ELEVATION
       - id: thickness
         type: f8
-        doc: $THICKNESS
+        doc: 0x0231-0x0238, $THICKNESS
       - id: view_point_x
         type: f8
         doc: 0x0239-0x0241, $VIEWDIR/10
