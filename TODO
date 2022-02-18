@@ -5,7 +5,6 @@ TODO
 12. Rename test files to -variables- (for header variables)
 13. Rewrite version_major
 14. Rewrite version_minor
-15. Rewrite version_micro
 16.
 
 Applied
@@ -36,4 +35,7 @@ OK [20220217] skim
 
 9. What about current_color enum?
 Remove
+OK [20220218] skim
+
+15. Rewrite version_micro
 OK [20220218] skim

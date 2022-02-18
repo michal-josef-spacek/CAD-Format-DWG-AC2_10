@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/zeros')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->version_micro, 83, 'Version micro.');
+is($obj->header->num_header_vars, 83, 'Number of header variables (83).');
