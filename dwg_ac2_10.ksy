@@ -516,12 +516,9 @@ types:
     seq:
       - id: entity_common
         type: entity_common
-      - id: start_point_x
-        type: f8
-        doc: ATTDEF/10
-      - id: start_point_y
-        type: f8
-        doc: ATTDEF/20
+      - id: start_point
+        type: point_2d
+        doc: ATTDEF/10|20
       - id: height
         type: f8
         doc: ATTDEF/40
@@ -567,14 +564,10 @@ types:
         type: attdef_flags2
         if: entity_common.flag2_2
         doc: ATTDEF/72
-      - id: end_point_x
-        type: f8
+      - id: end_point
+        type: point_2d
         if: entity_common.flag2_1
-        doc: ATTDEF/11
-      - id: end_point_y
-        type: f8
-        if: entity_common.flag2_1
-        doc: ATTDEF/21
+        doc: ATTDEF/11|21
   attdef_flags:
     seq:
       - id: flag_1
@@ -812,22 +805,14 @@ types:
     seq:
       - id: entity_common
         type: entity_common
-      - id: from_x
-        type: f8
-      - id: from_y
-        type: f8
-      - id: from_and_x
-        type: f8
-      - id: from_and_y
-        type: f8
-      - id: to_x
-        type: f8
-      - id: to_y
-        type: f8
-      - id: to_and_x
-        type: f8
-      - id: to_and_y
-        type: f8
+      - id: from
+        type: point_2d
+      - id: from_and
+        type: point_2d
+      - id: to
+        type: point_2d
+      - id: to_and
+        type: point_2d
   entity_text:
     seq:
       - id: entity_common
@@ -873,34 +858,22 @@ types:
         type: u1
         if: entity_common.flag2_3
         doc: TEXT/72
-      - id: aligned_to_x
-        type: f8
+      - id: aligned_to
+        type: point_2d
         if: entity_common.flag2_2
-        doc: TEXT/11
-      - id: aligned_to_y
-        type: f8
-        if: entity_common.flag2_2
-        doc: TEXT/21
+        doc: TEXT/11|21
   entity_trace:
     seq:
       - id: entity_common
         type: entity_common
-      - id: from_x
-        type: f8
-      - id: from_y
-        type: f8
-      - id: from_and_x
-        type: f8
-      - id: from_and_y
-        type: f8
-      - id: to_x
-        type: f8
-      - id: to_y
-        type: f8
-      - id: to_and_x
-        type: f8
-      - id: to_and_y
-        type: f8
+      - id: from
+        type: point_2d
+      - id: from_and
+        type: point_2d
+      - id: to
+        type: point_2d
+      - id: to_and
+        type: point_2d
   entity_vertex:
     seq:
       - id: entity_common
@@ -1100,24 +1073,15 @@ types:
       - id: view_size
         type: f8
         doc: VIEW/40
-      - id: center_point_x
-        type: f8
-        doc: VIEW/10
-      - id: center_point_y
-        type: f8
-        doc: VIEW/20
+      - id: center_point
+        type: point_2d
+        doc: VIEW/10|20
       - id: view_width
         type: f8
         doc: VIEW/41
-      - id: view_dir_x
-        type: f8
-        doc: VIEW/11
-      - id: view_dir_y
-        type: f8
-        doc: VIEW/21
-      - id: view_dir_z
-        type: f8
-        doc: VIEW/31
+      - id: view_dir
+        type: point_3d
+        doc: VIEW/11|21|31
       - id: u3
         type: u2
   view_flag:
