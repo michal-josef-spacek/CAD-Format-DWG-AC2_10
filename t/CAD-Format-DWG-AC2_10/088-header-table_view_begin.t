@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/table_view_begin')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->table_view_begin, 1095, 'Begin address of view table (1095).');
+is($obj->header->table_view->begin, 1095, 'Begin address of view table (1095).');

@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/table_style_begin')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->table_style_begin, 778, 'Begin address of style table (778).');
+is($obj->header->table_style->begin, 778, 'Begin address of style table (778).');

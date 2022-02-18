@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/table_style_item_size')->
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->table_style_item_size, 130, 'Size of item in style table (130).');
+is($obj->header->table_style->item_size, 130, 'Size of item in style table (130).');

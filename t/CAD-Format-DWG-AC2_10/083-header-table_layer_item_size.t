@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/header/table_layer_item_size')->
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->table_layer_item_size, 37, 'Size of item in layer table (37).');
+is($obj->header->table_layer->item_size, 37, 'Size of item in layer table (37).');
