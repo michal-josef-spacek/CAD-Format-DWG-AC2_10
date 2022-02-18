@@ -1,3 +1,4 @@
+.dwg_ac2_10.ksy.swp
 AC2_10.pm
 AC2_10.pod
 dwg_ac2_10.ksy
@@ -282,8 +283,11 @@ t/data/header/view_ctrl_x/BLANK.DWG
 t/data/header/view_ctrl_y/BLANK.DWG
 t/data/header/view_ctrl_z/BLANK.DWG
 t/data/header/view_point_x/BLANK.DWG
+t/data/header/view_point_x/VP1.DWG
 t/data/header/view_point_y/BLANK.DWG
+t/data/header/view_point_y/VP1.DWG
 t/data/header/view_point_z/BLANK.DWG
+t/data/header/view_point_z/VP1.DWG
 t/data/header/view_size/BLANK.DWG
 t/data/header/zero_one_or_three/BLANK.DWG
 t/data/header/zeros/BLANK.DWG
