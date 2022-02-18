@@ -3,7 +3,10 @@ TODO
 3. BLANK.DWG on one place.
 8. Rewrite header of entity
 12. Rename test files to -variables- (for header variables)
-13.
+13. Rewrite version_major
+14. Rewrite version_minor
+15. Rewrite version_micro
+16.
 
 Applied
 =======
