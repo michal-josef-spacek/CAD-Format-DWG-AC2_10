@@ -307,10 +307,10 @@ types:
         type: str
         encoding: ASCII
         terminator: 0x00
-        doc: $MENU
+        doc: 0x0194-0x01a2, $MENU
       - id: dim_scale
         type: f8
-        doc: $DIMSCALE
+        doc: 0x01a3-0x01aa, $DIMSCALE
       - id: dim_arrowhead_size
         type: f8
         doc: $DIMASZ
@@ -378,6 +378,7 @@ types:
         type: unknown_repeating
       - id: unknown29
         type: s2
+        doc: 0x02e1-0x02e2
       - id: blip
         type: s2
         doc: 0x02e3-0x02e4, $BLIPMODE
