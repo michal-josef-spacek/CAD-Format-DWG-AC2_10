@@ -1257,16 +1257,6 @@ enums:
     0: off
     1: normal
     2: on
-  current_color:
-    0: byblock
-    1: red
-    2: yellow
-    3: green
-    4: cyan
-    5: blue
-    6: magenta
-    7: white
-    256: bylayer
   iso_plane:
     0: left
     1: top

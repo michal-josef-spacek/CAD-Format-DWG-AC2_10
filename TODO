@@ -2,7 +2,6 @@ TODO
 ====
 3. BLANK.DWG on one place.
 8. Rewrite header of entity
-9. What about current_color enum?
 12. Rename test files to -variables- (for header variables)
 13.
 
@@ -31,3 +30,7 @@ OK [20220217] skim
 
 11. Add 3d point and rewrite to it
 OK [20220217] skim
+
+9. What about current_color enum?
+Remove
+OK [20220218] skim
