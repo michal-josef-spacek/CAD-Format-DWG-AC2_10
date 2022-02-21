@@ -348,6 +348,7 @@ types:
         doc: 0x0239-0x0251, $VIEWDIR/10|20|30
       - id: unknown_repeating
         type: unknown_repeating
+        doc: 0x0252-0x02e0
       - id: unknown29
         type: s2
         doc: 0x02e1-0x02e2
