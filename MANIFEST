@@ -138,6 +138,8 @@ t/CAD-Format-DWG-AC2_10/117-layers-color.t
 t/CAD-Format-DWG-AC2_10/118-layers-flag-frozen.t
 t/CAD-Format-DWG-AC2_10/119-layers-layer_name.t
 t/CAD-Format-DWG-AC2_10/120-layers-linetype_index.t
+t/CAD-Format-DWG-AC2_10/121-views-view_name.t
+t/CAD-Format-DWG-AC2_10/122-views-view_size.t
 t/data/entity/arc/ARC1.DWG
 t/data/entity/circle/CIRCLE1.DWG
 t/data/entity/line/LINE1.DWG
@@ -296,5 +298,7 @@ t/data/layers/flag/frozen/BLANK.DWG
 t/data/layers/layer_name/BLANK.DWG
 t/data/layers/layer_name/LAYER3.DWG
 t/data/layers/linetype_index/BLANK.DWG
+t/data/views/view_name/VIEW1.DWG
+t/data/views/view_size/VIEW1.DWG
 xt/CAD-Format-DWG-AC2_10/01-pod_coverage.t
 xt/CAD-Format-DWG-AC2_10/02-pod.t
