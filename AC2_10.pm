@@ -3909,8 +3909,7 @@ sub _read {
     my ($self) = @_;
 
     $self->{flag} = CAD::Format::DWG::AC2_10::ViewFlag->new($self->{_io}, $self, $self->{_root});
-    $self->{view_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(31), 0, 0));
-    $self->{u2} = $self->{_io}->read_u1();
+    $self->{view_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(32), 0, 0));
     $self->{view_size} = $self->{_io}->read_f8le();
     $self->{center_point} = CAD::Format::DWG::AC2_10::Point2d->new($self->{_io}, $self, $self->{_root});
     $self->{view_width} = $self->{_io}->read_f8le();
@@ -3926,11 +3925,6 @@ sub flag {
 sub view_name {
     my ($self) = @_;
     return $self->{view_name};
-}
-
-sub u2 {
-    my ($self) = @_;
-    return $self->{u2};
 }
 
 sub view_size {
