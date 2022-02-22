@@ -4,7 +4,8 @@ TODO
 8. Rewrite header of entity
 12. Rename test files to -variables- (for header variables)
 13. Rewrite version_major
-16.
+16. Rename number_of_entities to num_entities
+17.
 
 Applied
 =======
