@@ -4,7 +4,6 @@ TODO
 8. Rewrite header of entity
 12. Rename test files to -variables- (for header variables)
 13. Rewrite version_major
-14. Rewrite version_minor
 16.
 
 Applied
@@ -39,3 +38,6 @@ OK [20220218] skim
 
 15. Rewrite version_micro
 OK [20220218] skim
+
+14. Rewrite version_minor
+OK [20220223] skim
