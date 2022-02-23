@@ -3,7 +3,6 @@ TODO
 3. BLANK.DWG on one place.
 8. Rewrite header of entity
 12. Rename test files to -variables- (for header variables)
-13. Rewrite version_major
 17.
 
 Applied
@@ -43,4 +42,7 @@ OK [20220218] skim
 OK [20220223] skim
 
 16. Rename number_of_entities to num_entities
+OK [20220224] skim
+
+13. Rewrite version_major
 OK [20220224] skim

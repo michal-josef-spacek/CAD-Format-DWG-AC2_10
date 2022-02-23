@@ -114,7 +114,7 @@ t/CAD-Format-DWG-AC2_10/093-header-text_style_index.t
 t/CAD-Format-DWG-AC2_10/094-header-thickness.t
 t/CAD-Format-DWG-AC2_10/095-header-trace_width.t
 t/CAD-Format-DWG-AC2_10/096-header-units_for_angles.t
-t/CAD-Format-DWG-AC2_10/097-header-version_major.t
+t/CAD-Format-DWG-AC2_10/097-header-unknown_3.t
 t/CAD-Format-DWG-AC2_10/098-header-view_ctrl_x.t
 t/CAD-Format-DWG-AC2_10/099-header-view_ctrl_y.t
 t/CAD-Format-DWG-AC2_10/100-header-view_ctrl_z.t
@@ -281,7 +281,7 @@ t/data/header/thickness/BLANK.DWG
 t/data/header/trace_width/BLANK.DWG
 t/data/header/trace_width/TRACEW1.DWG
 t/data/header/units_for_angles/BLANK.DWG
-t/data/header/version_major/BLANK.DWG
+t/data/header/unknown_3/BLANK.DWG
 t/data/header/version_micro/BLANK.DWG
 t/data/header/version_minor/BLANK.DWG
 t/data/header/view_ctrl_x/BLANK.DWG
