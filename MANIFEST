@@ -231,6 +231,8 @@ t/data/header/magic/BLANK.DWG
 t/data/header/menu/BLANK.DWG
 t/data/header/menu/MENU1.DWG
 t/data/header/num_entities/BLANK.DWG
+t/data/header/num_header_vars/BLANK.DWG
+t/data/header/num_sections/BLANK.DWG
 t/data/header/ortho/BLANK.DWG
 t/data/header/ortho/ORTHO_ON.DWG
 t/data/header/osnap/BLANK.DWG
@@ -282,8 +284,6 @@ t/data/header/trace_width/BLANK.DWG
 t/data/header/trace_width/TRACEW1.DWG
 t/data/header/units_for_angles/BLANK.DWG
 t/data/header/unknown_3/BLANK.DWG
-t/data/header/version_micro/BLANK.DWG
-t/data/header/version_minor/BLANK.DWG
 t/data/header/view_ctrl_x/BLANK.DWG
 t/data/header/view_ctrl_y/BLANK.DWG
 t/data/header/view_ctrl_z/BLANK.DWG

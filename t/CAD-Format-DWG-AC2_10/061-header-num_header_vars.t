@@ -7,7 +7,7 @@ use Test::More 'tests' => 2;
 use Test::NoWarnings;
 
 # Data directory.
-my $data_dir = File::Object->new->up->dir('data/header/zeros')->set;
+my $data_dir = File::Object->new->up->dir('data/header/num_header_vars')->set;
 
 # Test.
 my $obj = CAD::Format::DWG::AC2_10->from_file(
