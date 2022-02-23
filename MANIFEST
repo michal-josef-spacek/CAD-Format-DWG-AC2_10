@@ -80,7 +80,7 @@ t/CAD-Format-DWG-AC2_10/059-header-magic.t
 t/CAD-Format-DWG-AC2_10/060-header-menu.t
 t/CAD-Format-DWG-AC2_10/061-header-num_header_vars.t
 t/CAD-Format-DWG-AC2_10/062-header-num_sections.t
-t/CAD-Format-DWG-AC2_10/063-header-number_of_entities.t
+t/CAD-Format-DWG-AC2_10/063-header-num_entities.t
 t/CAD-Format-DWG-AC2_10/064-header-ortho.t
 t/CAD-Format-DWG-AC2_10/065-header-osnap.t
 t/CAD-Format-DWG-AC2_10/066-header-qtext.t
@@ -230,7 +230,7 @@ t/data/header/linetype_scale/LTSCALE1.DWG
 t/data/header/magic/BLANK.DWG
 t/data/header/menu/BLANK.DWG
 t/data/header/menu/MENU1.DWG
-t/data/header/number_of_entities/BLANK.DWG
+t/data/header/num_entities/BLANK.DWG
 t/data/header/ortho/BLANK.DWG
 t/data/header/ortho/ORTHO_ON.DWG
 t/data/header/osnap/BLANK.DWG
