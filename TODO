@@ -5,7 +5,8 @@ TODO
 12. Rename test files to -variables- (for header variables)
 17. Add test for shape
 18. entity_shape x|y to point_2d
-19.
+19. Sort tests (080-header-table_linetype_begin.t, ..layer_begin..)
+20.
 
 Applied
 =======
