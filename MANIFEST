@@ -78,9 +78,9 @@ t/CAD-Format-DWG-AC2_10/057-header-linear_units_precision.t
 t/CAD-Format-DWG-AC2_10/058-header-linetype_scale.t
 t/CAD-Format-DWG-AC2_10/059-header-magic.t
 t/CAD-Format-DWG-AC2_10/060-header-menu.t
-t/CAD-Format-DWG-AC2_10/061-header-num_header_vars.t
-t/CAD-Format-DWG-AC2_10/062-header-num_sections.t
-t/CAD-Format-DWG-AC2_10/063-header-num_entities.t
+t/CAD-Format-DWG-AC2_10/061-header-num_entities.t
+t/CAD-Format-DWG-AC2_10/062-header-num_header_vars.t
+t/CAD-Format-DWG-AC2_10/063-header-num_sections.t
 t/CAD-Format-DWG-AC2_10/064-header-ortho.t
 t/CAD-Format-DWG-AC2_10/065-header-osnap.t
 t/CAD-Format-DWG-AC2_10/066-header-qtext.t
