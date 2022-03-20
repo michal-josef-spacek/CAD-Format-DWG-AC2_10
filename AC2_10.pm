@@ -280,10 +280,7 @@ sub _read {
         $self->{u6} = $self->{_io}->read_u1();
     }
     if ($self->entity_common()->flag2_1()) {
-        $self->{u7} = $self->{_io}->read_f8le();
-    }
-    if ($self->entity_common()->flag2_1()) {
-        $self->{u8} = $self->{_io}->read_f8le();
+        $self->{aligned_to} = CAD::Format::DWG::AC2_10::Point2d->new($self->{_io}, $self, $self->{_root});
     }
 }
 
@@ -342,14 +339,9 @@ sub u6 {
     return $self->{u6};
 }
 
-sub u7 {
+sub aligned_to {
     my ($self) = @_;
-    return $self->{u7};
-}
-
-sub u8 {
-    my ($self) = @_;
-    return $self->{u8};
+    return $self->{aligned_to};
 }
 
 ########################################################################

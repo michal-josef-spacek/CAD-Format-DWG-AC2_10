@@ -635,12 +635,10 @@ types:
         type: u1
         if: entity_common.flag2_2
         # 1, 2 nebo 7?
-      - id: u7
-        type: f8
+      - id: aligned_to
+        type: point_2d
         if: entity_common.flag2_1
-      - id: u8
-        type: f8
-        if: entity_common.flag2_1
+        doc: ATTRIB/11|21
   entity_block_begin:
     seq:
       - id: entity_common
