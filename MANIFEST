@@ -27,9 +27,9 @@ t/CAD-Format-DWG-AC2_10/006-header-axis_value_x.t
 t/CAD-Format-DWG-AC2_10/007-header-axis_value_y.t
 t/CAD-Format-DWG-AC2_10/008-header-blip.t
 t/CAD-Format-DWG-AC2_10/009-header-blocks_end.t
-t/CAD-Format-DWG-AC2_10/010-header-blocks_size.t
-t/CAD-Format-DWG-AC2_10/011-header-blocks_size_a.t
-t/CAD-Format-DWG-AC2_10/012-header-blocks_size_b.t
+t/CAD-Format-DWG-AC2_10/010-header-blocks_size_raw.t
+t/CAD-Format-DWG-AC2_10/011-header-blocks_size_unknown.t
+t/CAD-Format-DWG-AC2_10/012-header-blocks_size.t
 t/CAD-Format-DWG-AC2_10/013-header-blocks_start.t
 t/CAD-Format-DWG-AC2_10/014-header-current_color_convert.t
 t/CAD-Format-DWG-AC2_10/015-header-current_layer_index.t

@@ -13,16 +13,16 @@ my $data_dir = File::Object->new->up->dir('data/header/blocks_size')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->header->blocks_size_b, 0, 'Size of blocks section - 1-3 words (0).');
+is($obj->header->blocks_size_unknown, 0, 'Size of blocks section - unknown part - word (0).');
 
 # Test.
 $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLOCK1.DWG')->s,
 );
-is($obj->header->blocks_size_b, 72, 'Size of blocks section - 1-3 words (72).');
+is($obj->header->blocks_size_unknown, 0, 'Size of blocks section - unknown part - word (0).');
 
 # Test.
 $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLOCK2.DWG')->s,
 );
-is($obj->header->blocks_size_b, 136, 'Size of blocks section - 1-3 words (136).');
+is($obj->header->blocks_size_unknown, 0, 'Size of blocks section - unknown part - word (0).');
