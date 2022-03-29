@@ -2,7 +2,6 @@ TODO
 ====
 3. BLANK.DWG on one place.
 8. Rewrite header of entity
-12. Rename test files to -variables- (for header variables)
 17. Add test for shape
 18. entity_shape x|y to point_2d
 20.
@@ -51,3 +50,6 @@ OK [20220224] skim
 
 19. Sort tests (080-header-table_linetype_begin.t, ..layer_begin..)
 OK [20220224] skim
+
+12. Rename test files to -variables- (for header variables)
+OK [20220329] skim
