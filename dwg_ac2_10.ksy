@@ -911,6 +911,10 @@ types:
         type: point_2d
         if: entity_common.flag2_2
         doc: TEXT/11|21
+      - id: aligned_vert_to
+        type: point_2d
+        if: entity_common.flag2_1
+        doc: TEXT/73
   entity_trace:
     seq:
       - id: entity_common

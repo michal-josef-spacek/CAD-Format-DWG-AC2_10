@@ -2064,6 +2064,9 @@ sub _read {
     if ($self->entity_common()->flag2_2()) {
         $self->{aligned_to} = CAD::Format::DWG::AC2_10::Point2d->new($self->{_io}, $self, $self->{_root});
     }
+    if ($self->entity_common()->flag2_1()) {
+        $self->{aligned_vert_to} = CAD::Format::DWG::AC2_10::Point2d->new($self->{_io}, $self, $self->{_root});
+    }
 }
 
 sub entity_common {
@@ -2129,6 +2132,11 @@ sub type {
 sub aligned_to {
     my ($self) = @_;
     return $self->{aligned_to};
+}
+
+sub aligned_vert_to {
+    my ($self) = @_;
+    return $self->{aligned_vert_to};
 }
 
 ########################################################################
