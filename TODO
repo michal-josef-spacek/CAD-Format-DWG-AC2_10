@@ -5,7 +5,9 @@ TODO
 17. Add test for shape
 18. entity_shape x|y to point_2d
 20. Add unknown_conversion from AC1.50
-21.
+21. Add test for attdef entity
+22. Add test for attrib entity
+23.
 
 Applied
 =======
