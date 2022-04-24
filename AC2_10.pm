@@ -276,6 +276,18 @@ sub _read {
     if ($self->entity_common()->flag2_7()) {
         $self->{rotation_angle_in_radians} = $self->{_io}->read_f8le();
     }
+    if ($self->entity_common()->flag2_6()) {
+        $self->{width_scale_factor} = $self->{_io}->read_f8le();
+    }
+    if ($self->entity_common()->flag2_5()) {
+        $self->{obliquing_angle_in_radians} = $self->{_io}->read_f8le();
+    }
+    if ($self->entity_common()->flag2_4()) {
+        $self->{u1} = $self->{_io}->read_u1();
+    }
+    if ($self->entity_common()->flag2_3()) {
+        $self->{generation} = CAD::Format::DWG::AC2_10::GenerationFlags->new($self->{_io}, $self, $self->{_root});
+    }
     if ($self->entity_common()->flag2_2()) {
         $self->{horiz_text_justification_type} = $self->{_io}->read_u1();
     }
@@ -327,6 +339,26 @@ sub flags {
 sub rotation_angle_in_radians {
     my ($self) = @_;
     return $self->{rotation_angle_in_radians};
+}
+
+sub width_scale_factor {
+    my ($self) = @_;
+    return $self->{width_scale_factor};
+}
+
+sub obliquing_angle_in_radians {
+    my ($self) = @_;
+    return $self->{obliquing_angle_in_radians};
+}
+
+sub u1 {
+    my ($self) = @_;
+    return $self->{u1};
+}
+
+sub generation {
+    my ($self) = @_;
+    return $self->{generation};
 }
 
 sub horiz_text_justification_type {
