@@ -603,9 +603,16 @@ types:
         type: f8
         if: entity_common.flag2_6
         doc: ATTDEF/41
-      - id: unknown_index
+      - id: obliquing_angle_in_radians
+        type: f8
+        if: entity_common.flag2_5
+      - id: u1
         type: u1
         if: entity_common.flag2_4
+      - id: generation
+        type: generation_flags
+        if: entity_common.flag2_3
+        doc: ATTDEF/71
       - id: text_type
         type: u1
         enum: text_type
