@@ -59,7 +59,7 @@ types:
         encoding: ASCII
         terminator: 0x00
         doc: BLOCK/2
-      - id: u2
+      - id: begin_address_in_block_table
         type: s1
       - id: u3
         type: s1
