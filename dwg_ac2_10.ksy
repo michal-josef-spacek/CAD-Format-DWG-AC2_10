@@ -606,6 +606,7 @@ types:
       - id: obliquing_angle_in_radians
         type: f8
         if: entity_common.flag2_5
+        doc: ATTDEF/51
       - id: u1
         type: u1
         if: entity_common.flag2_4
