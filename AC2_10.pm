@@ -538,7 +538,7 @@ sub _read {
     $self->{flag5} = $self->{_io}->read_bits_int_be(1);
     $self->{flag6} = $self->{_io}->read_bits_int_be(1);
     $self->{flag7} = $self->{_io}->read_bits_int_be(1);
-    $self->{flag8} = $self->{_io}->read_bits_int_be(1);
+    $self->{anonymous} = $self->{_io}->read_bits_int_be(1);
 }
 
 sub flag1 {
@@ -576,9 +576,9 @@ sub flag7 {
     return $self->{flag7};
 }
 
-sub flag8 {
+sub anonymous {
     my ($self) = @_;
-    return $self->{flag8};
+    return $self->{anonymous};
 }
 
 ########################################################################

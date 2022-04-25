@@ -81,7 +81,7 @@ types:
         type: b1
       - id: flag7
         type: b1
-      - id: flag8
+      - id: anonymous
         type: b1
   header:
     seq:
