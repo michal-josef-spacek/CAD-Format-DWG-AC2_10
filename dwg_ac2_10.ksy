@@ -79,7 +79,7 @@ types:
         type: b1
       - id: flag6
         type: b1
-      - id: flag7
+      - id: has_attributes
         type: b1
       - id: anonymous
         type: b1
