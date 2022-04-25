@@ -20,6 +20,6 @@ my $pline1_data = $entity1->data;
 my $entity_common = $pline1_data->entity_common;
 is($entity_common->entity_layer_index, 0, 'Point layer index (0).');
 is($entity_common->entity_size, 9, 'Entity size (9).');
-is($pline1_data->closed, 1, 'Polyline is closed.');
+is($pline1_data->flag->closed, 1, 'Polyline is closed.');
 my $entities = @{$obj->entities->entities};
 is($entities, 6, 'Number of entities (6).');
