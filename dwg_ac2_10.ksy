@@ -60,9 +60,7 @@ types:
         terminator: 0x00
         doc: BLOCK/2
       - id: begin_address_in_block_table
-        type: s1
-      - id: u3
-        type: s1
+        type: u2
       - id: u4
         type: s1
       - id: u5
