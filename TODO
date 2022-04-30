@@ -7,7 +7,6 @@ TODO
 20. Add unknown_conversion from AC1.50
 21. Add test for attdef entity
 22. Add test for attrib entity
-24. Add test for solid entity
 25.
 
 Applied
@@ -60,3 +59,6 @@ OK [20220329] skim
 
 23. Rename solid variables to corner1-4
 OK [20220428] skim
+
+24. Add test for solid entity
+OK [20220501] skim
