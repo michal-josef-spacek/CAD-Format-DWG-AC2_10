@@ -2,7 +2,6 @@ TODO
 ====
 3. BLANK.DWG on one place.
 8. Rewrite header of entity
-17. Add test for shape
 18. entity_shape x|y to point_2d
 20. Add unknown_conversion from AC1.50
 21. Add test for attdef entity
@@ -61,4 +60,7 @@ OK [20220329] skim
 OK [20220428] skim
 
 24. Add test for solid entity
+OK [20220501] skim
+
+17. Add test for shape
 OK [20220501] skim
