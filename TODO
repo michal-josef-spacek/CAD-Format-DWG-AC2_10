@@ -4,7 +4,6 @@ TODO
 8. Rewrite header of entity
 18. entity_shape x|y to point_2d
 20. Add unknown_conversion from AC1.50
-22. Add test for attrib entity
 25.
 
 Applied
@@ -65,4 +64,7 @@ OK [20220501] skim
 OK [20220501] skim
 
 21. Add test for attdef entity
+OK [20220501] skim
+
+22. Add test for attrib entity
 OK [20220501] skim
