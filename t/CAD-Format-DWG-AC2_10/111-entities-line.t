@@ -3,7 +3,7 @@ use warnings;
 
 use CAD::Format::DWG::AC2_10;
 use File::Object;
-use Test::More 'tests' => 10;
+use Test::More 'tests' => 19;
 use Test::NoWarnings;
 
 # Data directory.
@@ -25,4 +25,22 @@ is($line1_data->y1, 0, 'Line y1 (0).');
 is($line1_data->x2, 1, 'Line x2 (1).');
 is($line1_data->y2, 1, 'Line y2 (1).');
 my $entities = @{$obj->entities->entities};
+is($entities, 1, 'Number of entities (1).');
+
+# Test.
+$obj = CAD::Format::DWG::AC2_10->from_file(
+	$data_dir->file('LINE2.DWG')->s,
+);
+$entity1 = $obj->entities->entities->[0];
+isa_ok($entity1, 'CAD::Format::DWG::AC2_10::Entity');
+is($entity1->entity_type, 1, 'Get entity type (1).');
+$line1_data = $entity1->data;
+$entity_common = $line1_data->entity_common;
+is($entity_common->entity_layer_index, 301, 'Line layer index (301).');
+is($entity_common->entity_size, 40, 'Entity size (40).');
+is($line1_data->x1, 0, 'Line x1 (0).');
+is($line1_data->y1, 0, 'Line y1 (0).');
+is($line1_data->x2, 1, 'Line x2 (1).');
+is($line1_data->y2, 1, 'Line y2 (1).');
+$entities = @{$obj->entities->entities};
 is($entities, 1, 'Number of entities (1).');

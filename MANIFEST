@@ -155,6 +155,7 @@ t/data/entity/attdef/ATTDEF2.DWG
 t/data/entity/attrib/ATTRIB1.DWG
 t/data/entity/circle/CIRCLE1.DWG
 t/data/entity/line/LINE1.DWG
+t/data/entity/line/LINE2.DWG
 t/data/entity/point/POINT1.DWG
 t/data/entity/point/POINT2.DWG
 t/data/entity/polyline2/PLINE1.DWG
