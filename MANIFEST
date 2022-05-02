@@ -151,6 +151,7 @@ t/CAD-Format-DWG-AC2_10/130-views-view_size.t
 t/CAD-Format-DWG-AC2_10/130-views-view_width.t
 t/data/entity/arc/ARC1.DWG
 t/data/entity/attdef/ATTDEF1.DWG
+t/data/entity/attdef/ATTDEF2.DWG
 t/data/entity/attrib/ATTRIB1.DWG
 t/data/entity/circle/CIRCLE1.DWG
 t/data/entity/line/LINE1.DWG
