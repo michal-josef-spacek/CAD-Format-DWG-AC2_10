@@ -605,9 +605,10 @@ types:
         type: f8
         if: entity_common.flag2_5
         doc: ATTDEF/51
-      - id: u1
+      - id: text_style_index
         type: u1
         if: entity_common.flag2_4
+        doc: ATTDEF/7
       - id: generation
         type: generation_flags
         if: entity_common.flag2_3
@@ -680,9 +681,10 @@ types:
         type: f8
         if: entity_common.flag2_5
         doc: ATTRIB/51
-      - id: u1
+      - id: text_style_index
         type: u1
         if: entity_common.flag2_4
+        doc: ATTRIB/7
       - id: generation
         type: generation_flags
         if: entity_common.flag2_3
