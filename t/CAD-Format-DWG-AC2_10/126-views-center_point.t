@@ -7,7 +7,7 @@ use Test::More 'tests' => 3;
 use Test::NoWarnings;
 
 # Data directory.
-my $data_dir = File::Object->new->up->dir('data/views/center_point')->set;
+my $data_dir = File::Object->new->up->dir('data/table/view/center_point')->set;
 
 # Test.
 my $obj = CAD::Format::DWG::AC2_10->from_file(

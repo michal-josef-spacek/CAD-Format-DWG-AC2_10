@@ -7,7 +7,7 @@ use Test::More 'tests' => 2;
 use Test::NoWarnings;
 
 # Data directory.
-my $data_dir = File::Object->new->up->dir('data/layers/flag/frozen')->set;
+my $data_dir = File::Object->new->up->dir('data/table/layer/flag/frozen')->set;
 
 # Test.
 my $obj = CAD::Format::DWG::AC2_10->from_file(
