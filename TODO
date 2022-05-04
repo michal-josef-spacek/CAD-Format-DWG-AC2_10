@@ -2,7 +2,6 @@ TODO
 ====
 3. BLANK.DWG on one place.
 8. Rewrite header of entity
-18. entity_shape x|y to point_2d
 25.
 
 Applied
@@ -70,3 +69,6 @@ OK [20220501] skim
 
 20. Add unknown_conversion from AC1.50
 OK [20220502] skim
+
+18. entity_shape x|y to point_2d
+OK [20220504] skim

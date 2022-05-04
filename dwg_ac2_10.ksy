@@ -882,12 +882,9 @@ types:
     seq:
       - id: entity_common
         type: entity_common
-      - id: x
-        type: f8
-        doc: SHAPE/10
-      - id: y
-        type: f8
-        doc: SHAPE/20
+      - id: start_point
+        type: point_2d
+        doc: SHAPE/10|20
       - id: height
         type: f8
         doc: SHAPE/40
