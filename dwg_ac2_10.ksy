@@ -1090,7 +1090,7 @@ types:
     seq:
       - id: flag1
         type: b1
-      - id: flag2
+      - id: referenced
         type: b1
       - id: flag3
         type: b1
@@ -1102,7 +1102,7 @@ types:
         type: b1
       - id: flag7
         type: b1
-      - id: frozen
+      - id: flag8
         type: b1
   real_entities:
     seq:
