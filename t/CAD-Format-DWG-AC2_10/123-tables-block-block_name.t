@@ -3,7 +3,7 @@ use warnings;
 
 use CAD::Format::DWG::AC2_10;
 use File::Object;
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
 use Test::NoWarnings;
 
 # Data directory.
@@ -22,3 +22,9 @@ $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLOCK2.DWG')->s,
 );
 is($obj->blocks->[0]->block_name, '*X', 'Block name (*X).');
+
+# Test.
+$obj = CAD::Format::DWG::AC2_10->from_file(
+	$data_dir->file('BLOCK3.DWG')->s,
+);
+is($obj->blocks->[0]->block_name, 'BLOCK1', 'Block name (BLOCK1).');

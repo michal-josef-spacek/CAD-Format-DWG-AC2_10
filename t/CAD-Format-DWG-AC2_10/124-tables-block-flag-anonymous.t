@@ -3,7 +3,7 @@ use warnings;
 
 use CAD::Format::DWG::AC2_10;
 use File::Object;
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
 use Test::NoWarnings;
 
 # Data directory.
@@ -24,3 +24,10 @@ $obj = CAD::Format::DWG::AC2_10->from_file(
 );
 is($obj->blocks->[0]->flag->anonymous, 1,
 	'Block anonymous flag (1).');
+
+# Test.
+$obj = CAD::Format::DWG::AC2_10->from_file(
+	$data_dir->file('BLOCK3.DWG')->s,
+);
+is($obj->blocks->[0]->flag->anonymous, 0,
+	'Block anonymous flag (0).');
