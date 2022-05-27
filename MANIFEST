@@ -311,6 +311,7 @@ t/data/header/view_size/BLANK.DWG
 t/data/header/zero_one_or_three/BLANK.DWG
 t/data/header/zeros/BLANK.DWG
 t/data/table/block/BLOCK1.DWG
+t/data/table/block/BLOCK2.DWG
 t/data/table/layer/color/BLANK.DWG
 t/data/table/layer/color/LAYER1.DWG
 t/data/table/layer/flag/frozen/BLANK.DWG
