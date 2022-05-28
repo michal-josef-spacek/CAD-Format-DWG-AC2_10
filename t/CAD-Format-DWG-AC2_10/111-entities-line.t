@@ -10,6 +10,7 @@ use Test::NoWarnings;
 my $data_dir = File::Object->new->up->dir('data/entity/line')->set;
 
 # Test.
+note("File 'LINE1.DWG'");
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('LINE1.DWG')->s,
 );
@@ -28,6 +29,7 @@ my $entities = @{$obj->entities->entities};
 is($entities, 1, 'Number of entities (1).');
 
 # Test.
+note("File 'LINE2.DWG'");
 $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('LINE2.DWG')->s,
 );

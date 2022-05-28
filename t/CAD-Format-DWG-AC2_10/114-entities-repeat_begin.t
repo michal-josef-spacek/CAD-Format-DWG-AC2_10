@@ -10,6 +10,7 @@ use Test::NoWarnings;
 my $data_dir = File::Object->new->up->dir('data/entity/repeat_begin')->set;
 
 # Test.
+note("File 'REPEAT1.DWG'");
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('REPEAT1.DWG')->s,
 );

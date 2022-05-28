@@ -10,6 +10,7 @@ use Test::NoWarnings;
 my $data_dir = File::Object->new->up->dir('data/entity/circle')->set;
 
 # Test.
+note("File 'CIRCLE1.DWG'");
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('CIRCLE1.DWG')->s,
 );
