@@ -2,7 +2,9 @@ TODO
 ====
 3. BLANK.DWG on one place.
 8. Rewrite header of entity
-25.
+25. dwg/AC2.10/saved_by_r02.17_by_me/LIB/entity/attdef/ATTDEF2.DWG has in second
+entity + 6 bytes (probably issue with temporary something). How to handle?
+26.
 
 Applied
 =======
