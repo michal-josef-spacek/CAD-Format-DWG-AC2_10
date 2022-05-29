@@ -22,8 +22,8 @@ my $entity_common = $arc1_data->entity_common;
 is($entity_common->entity_layer_index, 0, 'Arc layer index (0).');
 is($entity_common->entity_size, 48, 'Entity size (48).');
 # XXX Construct precise values
-is($arc1_data->x, 1.5, 'Arc x (1.5).');
-is($arc1_data->y, -0.5, 'Arc y (-0.5).');
+is($arc1_data->center_point->x, 1.5, 'Arc x (1.5).');
+is($arc1_data->center_point->y, -0.5, 'Arc y (-0.5).');
 is($arc1_data->radius, 1.58113883008419, 'Arc radius (1.58113883008419).');
 is($arc1_data->angle_from, 1.24904577239825, 'Arc start angle in radians (1.24904577239825).');
 is($arc1_data->angle_to, 2.81984209919315, 'Arc end angle in radians (2.81984209919315).');
