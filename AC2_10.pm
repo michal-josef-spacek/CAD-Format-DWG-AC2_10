@@ -3633,6 +3633,9 @@ sub _read {
     if ($self->entity_common()->flag2_8()) {
         $self->{start_width} = $self->{_io}->read_f8le();
     }
+    if ($self->entity_common()->flag2_7()) {
+        $self->{end_width} = $self->{_io}->read_f8le();
+    }
     if ($self->entity_common()->flag2_6()) {
         $self->{bulge} = $self->{_io}->read_f8le();
     }
@@ -3659,6 +3662,11 @@ sub y {
 sub start_width {
     my ($self) = @_;
     return $self->{start_width};
+}
+
+sub end_width {
+    my ($self) = @_;
+    return $self->{end_width};
 }
 
 sub bulge {
