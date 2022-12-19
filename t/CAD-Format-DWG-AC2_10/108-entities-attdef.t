@@ -30,7 +30,7 @@ is($attdef1_data->tag, 'ATTRIBUTE', 'Attdef attribute (ATTRIBUTE).');
 is($attdef1_data->flags->verify, 0, 'Attdef flags - verify (0).');
 is($attdef1_data->flags->constant, 0, 'Attdef flags - constant (0).');
 is($attdef1_data->flags->invisible, 0, 'Attdef flags - invisible (0).');
-is($attdef1_data->text_type, 3, 'Attdef text type (3 - text_type_aligned).');
+is($attdef1_data->horiz_alignment, 3, 'Attdef text horizontal alignment (3 - aligned).');
 is($attdef1_data->end_point->x, 10, 'Attdef end point x (10).');
 is($attdef1_data->end_point->y, 2, 'Attdef end point y (2).');
 my $entities = @{$obj->entities->entities};

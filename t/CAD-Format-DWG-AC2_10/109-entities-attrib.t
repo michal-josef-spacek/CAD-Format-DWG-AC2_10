@@ -26,7 +26,7 @@ is($attrib1_data->point_from->y, 2, 'Attdef point from y (2).');
 is($attrib1_data->height, 3.75, 'Attdef height (3.75).');
 is($attrib1_data->value, 'bar', 'Attdef prompt (bar).');
 is($attrib1_data->tag, 'ATTRIBUTE', 'Attdef attribute (ATTRIBUTE).');
-is($attrib1_data->horiz_text_justification_type, 3, 'Attdef horizontal text justification type (3 - text_type_aligned).');
+is($attrib1_data->horiz_alignment, 3, 'Attdef horizontal alignment (3 - aligned).');
 is($attrib1_data->aligned_to->x, 10, 'Attdef aligned to x (10).');
 is($attrib1_data->aligned_to->y, 2, 'Attdef aligned to y (2).');
 my $entities = @{$obj->entities->entities};

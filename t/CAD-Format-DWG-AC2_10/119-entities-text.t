@@ -28,6 +28,6 @@ is($text1_data->size, 7, 'Text size (7).');
 is($text1_data->value, '%%UText', 'Text value (%%UText - %%U = underlined text).');
 is($text1_data->aligned_to->x, 10, 'Text aligned to x (10).');
 is($text1_data->aligned_to->y, 1, 'Text aligned to y (1).');
-is($text1_data->type, 3, 'Text type (3 = aligned).');
+is($text1_data->horiz_alignment, 3, 'Text horizontal alignment (3 = aligned).');
 my $entities = @{$obj->entities->entities};
 is($entities, 1, 'Number of entities (1).');
