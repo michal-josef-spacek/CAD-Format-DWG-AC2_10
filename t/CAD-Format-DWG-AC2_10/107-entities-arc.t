@@ -19,8 +19,8 @@ isa_ok($entity1, 'CAD::Format::DWG::AC2_10::Entity');
 is($entity1->entity_type, 8, 'Get entity type (8).');
 my $arc1_data = $entity1->data;
 my $entity_common = $arc1_data->entity_common;
-is($entity_common->entity_layer_index, 0, 'Arc layer index (0).');
-is($entity_common->entity_size, 48, 'Entity size (48).');
+is($arc1_data->entity_layer_index, 0, 'Arc layer index (0).');
+is($arc1_data->entity_size, 48, 'Entity size (48).');
 # XXX Construct precise values
 is($arc1_data->center_point->x, 1.5, 'Arc x (1.5).');
 is($arc1_data->center_point->y, -0.5, 'Arc y (-0.5).');
