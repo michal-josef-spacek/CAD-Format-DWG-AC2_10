@@ -34,11 +34,11 @@ $obj = CAD::Format::DWG::AC2_10->from_file(
 $entity1 = $obj->entities->entities->[0];
 isa_ok($entity1, 'CAD::Format::DWG::AC2_10::Entity');
 is($entity1->entity_type, 2, 'Get entity type (2).');
-my $point2_data = $entity1->data;
-$entity_common = $point2_data->entity_common;
-is($point2_data->entity_layer_index, 0, 'Point layer index (0).');
-is($point2_data->entity_size, 24, 'Entity size (24).');
-is($point2_data->x, 1.2345, 'Point x (1.2345).');
-is($point2_data->y, 6.789, 'Point y (6.789).');
+$point1_data = $entity1->data;
+$entity_common = $point1_data->entity_common;
+is($point1_data->entity_layer_index, 0, 'Point layer index (0).');
+is($point1_data->entity_size, 24, 'Entity size (24).');
+is($point1_data->x, 1.2345, 'Point x (1.2345).');
+is($point1_data->y, 6.789, 'Point y (6.789).');
 $entities = @{$obj->entities->entities};
 is($entities, 1, 'Number of entities (1).');
