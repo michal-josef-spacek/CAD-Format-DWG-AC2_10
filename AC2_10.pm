@@ -2371,9 +2371,7 @@ sub _read {
 
     $self->{flag} = CAD::Format::DWG::AC2_10::BlockFlag->new($self->{_io}, $self, $self->{_root});
     $self->{block_name} = Encode::decode("ASCII", IO::KaitaiStruct::Stream::bytes_terminate($self->{_io}->read_bytes(32), 0, 0));
-    $self->{begin_address_in_block_table} = $self->{_io}->read_u2le();
-    $self->{u4} = $self->{_io}->read_s1();
-    $self->{u5} = $self->{_io}->read_s1();
+    $self->{begin_address_in_block_table} = $self->{_io}->read_u4le();
 }
 
 sub flag {
@@ -2389,16 +2387,6 @@ sub block_name {
 sub begin_address_in_block_table {
     my ($self) = @_;
     return $self->{begin_address_in_block_table};
-}
-
-sub u4 {
-    my ($self) = @_;
-    return $self->{u4};
-}
-
-sub u5 {
-    my ($self) = @_;
-    return $self->{u5};
 }
 
 ########################################################################
