@@ -1,0 +1,18 @@
+LINETYPE C LT0 LT_FILE
+This is linetype #0
+.5,-0
+
+LINETYPE L LT0 LT_FILE
+
+LINETYPE C LT1 LT_FILE
+This is linetype #1
+.5,-0.01
+
+LINETYPE L LT1 LT_FILE
+
+LINETYPE C LT2 LT_FILE
+This is linetype #2
+.5,-0.02
+
+LINETYPE L LT2 LT_FILE
+

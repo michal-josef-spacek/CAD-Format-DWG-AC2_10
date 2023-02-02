@@ -3742,7 +3742,7 @@ sub _read {
     $self->{magic} = $self->{_io}->read_bytes(6);
     $self->{zeros} = $self->{_io}->read_bytes(6);
     $self->{zero_one_or_three} = $self->{_io}->read_s1();
-    $self->{unknown_3} = $self->{_io}->read_s2le();
+    $self->{num_entity_sections} = $self->{_io}->read_s2le();
     $self->{num_sections} = $self->{_io}->read_s2le();
     $self->{num_header_vars} = $self->{_io}->read_s2le();
     $self->{dwg_version} = $self->{_io}->read_s1();
@@ -3790,9 +3790,9 @@ sub zero_one_or_three {
     return $self->{zero_one_or_three};
 }
 
-sub unknown_3 {
+sub num_entity_sections {
     my ($self) = @_;
-    return $self->{unknown_3};
+    return $self->{num_entity_sections};
 }
 
 sub num_sections {
