@@ -13,5 +13,5 @@ my $data_dir = File::Object->new->up->dir('data/table/view/center_point')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('VIEW1.DWG')->s,
 );
-is($obj->views->[0]->center_point->x, 3, 'View center point x (0).');
-is($obj->views->[0]->center_point->y, 3, 'View center point y (0).');
+is($obj->table_views->[0]->center_point->x, 3, 'View center point x (0).');
+is($obj->table_views->[0]->center_point->y, 3, 'View center point y (0).');

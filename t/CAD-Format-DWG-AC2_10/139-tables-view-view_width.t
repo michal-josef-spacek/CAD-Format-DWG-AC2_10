@@ -13,4 +13,4 @@ my $data_dir = File::Object->new->up->dir('data/table/view/view_width')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('VIEW1.DWG')->s,
 );
-is($obj->views->[0]->view_width, 4, 'View width (4).');
+is($obj->table_views->[0]->view_width, 4, 'View width (4).');

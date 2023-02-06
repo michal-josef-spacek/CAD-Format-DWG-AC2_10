@@ -13,10 +13,10 @@ my $data_dir = File::Object->new->up->dir('data/table/layer/color')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('BLANK.DWG')->s,
 );
-is($obj->layers->[0]->color, 7, 'Color (7 - default).');
+is($obj->table_layers->[0]->color, 7, 'Color (7 - default).');
 
 # Test.
 $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('LAYER1.DWG')->s,
 );
-is($obj->layers->[1]->color, -7, 'Color (-7 - layer if off).');
+is($obj->table_layers->[1]->color, -7, 'Color (-7 - layer if off).');

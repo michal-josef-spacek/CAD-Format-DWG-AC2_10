@@ -13,10 +13,10 @@ my $data_dir = File::Object->new->up->dir('data/table/view/flag_3d')->set;
 my $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('VIEW1.DWG')->s,
 );
-is($obj->views->[0]->flag_3d, 0, 'View 3d flag (0).');
+is($obj->table_views->[0]->flag_3d, 0, 'View 3d flag (0).');
 
 # Test.
 $obj = CAD::Format::DWG::AC2_10->from_file(
 	$data_dir->file('VIEW2.DWG')->s,
 );
-is($obj->views->[0]->flag_3d, 1, 'View 3d flag (1).');
+is($obj->table_views->[0]->flag_3d, 1, 'View 3d flag (1).');
