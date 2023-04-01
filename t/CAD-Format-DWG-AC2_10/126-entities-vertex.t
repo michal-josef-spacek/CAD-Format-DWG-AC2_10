@@ -7,7 +7,7 @@ use Test::More 'tests' => 14;
 use Test::NoWarnings;
 
 # Data directory.
-my $data_dir = File::Object->new->up->dir('data/entity/polyline2')->set;
+my $data_dir = File::Object->new->up->dir('data/entity/polyline')->set;
 
 # Test.
 note("File 'PLINE1.DWG'");
