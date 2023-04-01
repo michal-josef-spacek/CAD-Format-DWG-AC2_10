@@ -3,7 +3,7 @@ use warnings;
 
 use CAD::Format::DWG::AC2_10;
 use File::Object;
-use Test::More 'tests' => 6;
+use Test::More 'tests' => 7;
 use Test::NoWarnings;
 
 # Data directory.
@@ -21,5 +21,6 @@ my $seqend1_data = $entity6->data;
 my $entity_common = $seqend1_data->entity_common;
 is($seqend1_data->entity_layer_index, 0, 'Point layer index (0).');
 is($seqend1_data->entity_size, 12, 'Entity size (12).');
+is($seqend1_data->begin_addr, 0x2e5, 'Begin address of sequence (0x2e5).');
 my $entities = @{$obj->entities->entities};
 is($entities, 6, 'Number of entities (6).');
