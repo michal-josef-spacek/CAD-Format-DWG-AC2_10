@@ -6,7 +6,8 @@ TODO
 entity + 6 bytes (probably issue with temporary something). How to handle?
 26. dwg/AC2.10/from_autocad_2.5/CHAIR.DWG - need to change position to table
 block.
-27.
+27. Add tests for seqend in insert.
+28.
 
 Applied
 =======
