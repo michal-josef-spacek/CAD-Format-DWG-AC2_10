@@ -57,7 +57,7 @@ t/CAD-Format-DWG-AC2_10/036-header-variables-axis.t
 t/CAD-Format-DWG-AC2_10/037-header-variables-axis_value_x.t
 t/CAD-Format-DWG-AC2_10/038-header-variables-axis_value_y.t
 t/CAD-Format-DWG-AC2_10/039-header-variables-blip.t
-t/CAD-Format-DWG-AC2_10/040-header-variables-current_color_convert.t
+t/CAD-Format-DWG-AC2_10/040-header-variables-current_color_convert_lo.t
 t/CAD-Format-DWG-AC2_10/041-header-variables-current_layer_index.t
 t/CAD-Format-DWG-AC2_10/042-header-variables-dim_arrowhead_size.t
 t/CAD-Format-DWG-AC2_10/043-header-variables-dim_baseline_spacing.t
@@ -195,7 +195,7 @@ t/data/header/blocks_size/BLOCK2.DWG
 t/data/header/blocks_start/BLANK.DWG
 t/data/header/blocks_start/BLOCK1.DWG
 t/data/header/blocks_start/BLOCK2.DWG
-t/data/header/current_color_convert/BLANK.DWG
+t/data/header/current_color_convert_lo/BLANK.DWG
 t/data/header/current_layer_index/BLANK.DWG
 t/data/header/current_layer_index/CURLAY1.DWG
 t/data/header/dim_arrowhead_size/BLANK.DWG
